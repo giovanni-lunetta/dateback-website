@@ -1,12 +1,12 @@
 # DateBack Website
 
-Official website for [DateBack](https://savemymemories.app) - Archive your Snapchat Memories the right way.
+Official website for [DateBack](https://dateback.app) - Archive your Snapchat Memories the right way.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-BADGE-ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
 
 ## 🌐 Live Site
 
-**Production:** [https://savemymemories.app](https://savemymemories.app)
+**Production:** [https://dateback.app](https://dateback.app)
 
 ## 📋 About
 
@@ -95,7 +95,7 @@ DateBack app: Proprietary
 
 ## 🔗 Links
 
-- **Website:** [savemymemories.app](https://savemymemories.app)
+- **Website:** [dateback.app](https://dateback.app)
 - **Purchase:** [Buy DateBack](https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI)
 - **Support:** Contact form on website
 - **App Repository:** Private

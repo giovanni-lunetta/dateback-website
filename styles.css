@@ -8,7 +8,7 @@
     --text-muted: #b0c4d4;           /* Soft blue-gray */
     --accent-primary: #88BDF2;       /* Sky blue (main accent) */
     --accent-primary-hover: #6A89A7; /* Muted blue (hover) */
-    --accent-secondary: #BDDFC;      /* Light blue (incomplete hex, using #BBDDFF) */
+    --accent-secondary: #BDDDFC;      /* Light sky blue (Stormy Morning) */
     --accent-tertiary: #6A89A7;      /* Muted slate blue */
     --gradient-main: linear-gradient(135deg, #6A89A7 0%, #88BDF2 50%, #BBDDFF 100%);
     --border-color: rgba(136, 189, 242, 0.15);
