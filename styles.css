@@ -1242,7 +1242,7 @@ nav.scrolled .nav-container {
     color: var(--text-muted);
 }
 
-.comparison-header.memsavr {
+.comparison-header.dateback {
     background: rgba(136, 189, 242, 0.15);
     color: var(--accent-primary);
     border-left: 2px solid var(--accent-primary);
@@ -1272,7 +1272,7 @@ nav.scrolled .nav-container {
     text-align: center;
 }
 
-.comparison-cell.memsavr {
+.comparison-cell.dateback {
     background: rgba(136, 189, 242, 0.08);
     color: var(--accent-primary);
     font-weight: 600;
@@ -1347,12 +1347,12 @@ nav.scrolled .nav-container {
         color: #ef4444;
     }
 
-    .memsavr-card {
+    .dateback-card {
         background: rgba(136, 189, 242, 0.1);
         border: 1px solid rgba(136, 189, 242, 0.3);
     }
 
-    .memsavr-card h4 {
+    .dateback-card h4 {
         color: var(--accent-primary);
     }
 }

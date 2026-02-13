@@ -1,4 +1,4 @@
-// MemSavr Website JavaScript
+// DateBack Website JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 viewWithout.setAttribute('aria-hidden', 'true');
                 viewWith.setAttribute('aria-hidden', 'false');
 
-                // Show "With MemSavr" caption
+                // Show "With DateBack" caption
                 document.querySelector('.caption-without').style.display = 'none';
                 document.querySelector('.caption-with').style.display = 'block';
             } else {
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 viewWithout.setAttribute('aria-hidden', 'false');
                 viewWith.setAttribute('aria-hidden', 'true');
 
-                // Show "Without MemSavr" caption
+                // Show "Without DateBack" caption
                 document.querySelector('.caption-without').style.display = 'block';
                 document.querySelector('.caption-with').style.display = 'none';
             }

@@ -1,6 +1,6 @@
-# MemSavr Website
+# DateBack Website
 
-Official website for [MemSavr](https://savemymemories.app) - Archive your Snapchat Memories the right way.
+Official website for [DateBack](https://savemymemories.app) - Archive your Snapchat Memories the right way.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-BADGE-ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
 
@@ -10,7 +10,7 @@ Official website for [MemSavr](https://savemymemories.app) - Archive your Snapch
 
 ## 📋 About
 
-MemSavr is a macOS app that processes Snapchat Memories exports, fixing metadata and organizing files for cloud storage. This repository contains the marketing website and documentation.
+DateBack is a macOS app that processes Snapchat Memories exports, fixing metadata and organizing files for cloud storage. This repository contains the marketing website and documentation.
 
 ## 🛠️ Tech Stack
 
@@ -24,8 +24,8 @@ MemSavr is a macOS app that processes Snapchat Memories exports, fixing metadata
 
 ```bash
 # Clone the repository
-git clone https://github.com/giovanni-lunetta/memsavr-website.git
-cd memsavr-website
+git clone https://github.com/giovanni-lunetta/dateback-website.git
+cd dateback-website
 
 # Option 1: Open directly in browser
 open index.html
@@ -41,7 +41,7 @@ npx http-server -p 8000
 ## 📁 Project Structure
 
 ```
-memsavr-website/
+dateback-website/
 ├── index.html          # Main landing page
 ├── changelog.html      # Release notes
 ├── styles.css          # All styles
@@ -91,12 +91,12 @@ Found a typo or bug? Contributions are welcome!
 ## 📝 License
 
 Website code: **MIT License** (see [LICENSE](LICENSE))  
-MemSavr app: Proprietary
+DateBack app: Proprietary
 
 ## 🔗 Links
 
 - **Website:** [savemymemories.app](https://savemymemories.app)
-- **Purchase:** [Buy MemSavr](https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI)
+- **Purchase:** [Buy DateBack](https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI)
 - **Support:** Contact form on website
 - **App Repository:** Private
 
@@ -107,7 +107,7 @@ This website uses Google Analytics to understand visitor behavior. No personally
 ## 🙏 Acknowledgments
 
 - Design inspiration from modern SaaS landing pages
-- Icons and assets created specifically for MemSavr
+- Icons and assets created specifically for DateBack
 - Hosted on [Netlify](https://www.netlify.com/)
 
 ---
