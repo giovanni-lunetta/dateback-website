@@ -30,9 +30,8 @@
             </div>
 
             <div class="nav-right">
-                <a href="https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI"
-                    class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Buy &amp; Download for Mac —
-                    $1.99</a>
+                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
+                    class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
                 <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
             </div>
         </div>
@@ -44,9 +43,9 @@
             <a href="index.html#comparison">Compare</a>
             <a href="index.html#pricing">Pricing</a>
             <a href="index.html#faq">FAQ</a>
-            <a href="https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI" class="nav-cta"
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta"
                 style="margin: 1rem 20px; display: inline-block; text-align: center;" target="_blank"
-                rel="noopener noreferrer">Buy &amp; Download for Mac — $1.99</a>
+                rel="noopener noreferrer">Download for Mac</a>
         </div>
     </nav>
 
@@ -66,8 +65,22 @@
     <section id="release-notes" style="padding-top: 2rem;">
         <div class="container">
             <div class="changelog-container">
-                <!-- v1.2.1 - Latest (Expanded by default) -->
+                <!-- v1.3.0 - Latest (Expanded by default) -->
                 <details class="changelog-entry" open>
+                    <summary class="changelog-version">
+                        <span class="version-badge">v1.3.0</span>
+                        <span class="version-date">May 5, 2026</span>
+                    </summary>
+                    <ul class="changelog-list">
+                        <li>Distribution — DateBack is now a free Mac download with no purchase or activation key required</li>
+                        <li>App — Removed the license activation flow and local license storage</li>
+                        <li>Website — Download links now point to GitHub Releases, with optional Buy Me A Coffee support</li>
+                        <li>Legal — Updated terms and privacy policy for the free download and optional donations model</li>
+                    </ul>
+                </details>
+
+                <!-- v1.2.1 -->
+                <details class="changelog-entry">
                     <summary class="changelog-version">
                         <span class="version-badge">v1.2.1</span>
                         <span class="version-date">April 18, 2026</span>
@@ -112,7 +125,7 @@
                     </summary>
                     <ul class="changelog-list">
                         <li>Build reliability — explicit binary packaging ensures memory-organizer and ffmpeg are always included in the app bundle</li>
-                        <li>Internal — corrected Polar sandbox API host; sandbox mode remains gated and never active in production</li>
+                        <li>Internal — improved QA build configuration for release testing</li>
                     </ul>
                 </details>
 
@@ -123,7 +136,7 @@
                         <span class="version-date">February 21, 2026</span>
                     </summary>
                     <ul class="changelog-list">
-                        <li>Security — Polar sandbox mode now requires explicit double-flag opt-in; production endpoint is always the default</li>
+                        <li>Security — QA release mode now requires explicit double-flag opt-in; production configuration is always the default</li>
                     </ul>
                 </details>
 
@@ -174,7 +187,7 @@
                         <li>Legal — Updated Privacy Policy with accurate data handling</li>
                         <li>Legal — FFmpeg source package now available at dateback.app/licenses/ffmpeg-source.zip</li>
                         <li>Contact — New support email: support@dateback.app</li>
-                        <li>Migration — All existing license keys remain valid</li>
+                        <li>Migration — Existing app settings and connections preserved automatically</li>
                         <li>Migration — Settings and Google Photos connections preserved automatically</li>
                     </ul>
                 </details>
@@ -193,7 +206,7 @@
                         <li>Security — TOCTOU race condition fix in directory validation</li>
                         <li>Security — ZIP path validation before subprocess execution</li>
                         <li>Security — Recursive symlink protection in directory deletion</li>
-                        <li>Security — Rate limiting on license validation (5 attempts/minute)</li>
+                        <li>Security — Rate limiting added to sensitive validation flows</li>
                         <li>Security — Auto-updater downgrade attack protection</li>
                         <li>Website — Added security headers (CSP, X-Frame-Options, XSS protection)</li>
                         <li>Website — Fixed mobile image overlap in comparison section</li>
@@ -212,12 +225,12 @@
                         <span class="version-date">January 9, 2026</span>
                     </summary>
                     <ul class="changelog-list">
-                        <li>Payment Platform — Migrated from LemonSqueezy to Polar.sh ($15 → $10 launch pricing)</li>
+                        <li>Distribution — Updated the app download and release flow</li>
                         <li>Security — SSRF protection with URL validation and redirect blocking</li>
                         <li>Security — ZIP symlink blocking to prevent local file disclosure</li>
                         <li>Website — Added sticky mobile CTA bar for better mobile conversion</li>
                         <li>Website — Enhanced hero copy with outcome-focused messaging</li>
-                        <li>Website — Added 14-day money-back guarantee and trust badges</li>
+                        <li>Website — Added clearer support messaging and trust badges</li>
                         <li>Performance — Image optimization with lazy loading and explicit dimensions</li>
                         <li>Accessibility — Added keyboard navigation skip link (WCAG compliance)</li>
                         <li>Bug Fix — Cloud Mode resume UI now shows "Resuming..." status</li>

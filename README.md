@@ -40,6 +40,17 @@ npx http-server -p 8000
 
 Additional local-device testing notes live in `docs/MOBILE_TESTING_LOCAL_WEBSITE.md`.
 
+## 🚦 Deployment Gate
+
+The site download buttons point to GitHub `releases/latest`, so do not deploy website copy for a new app version until the release repository is public and `latest` points at that version:
+
+```bash
+unset GH_TOKEN
+gh repo view giovanni-lunetta/dateback-releases --json latestRelease,visibility --jq '{visibility:.visibility, latestTag:.latestRelease.tagName}'
+```
+
+For the free-download launch, this must return `PUBLIC` and `v1.3.0`. Deploying before that would advertise the free/no-activation app while the download page can still serve the older activation build.
+
 ## 📁 Project Structure
 
 ```
@@ -99,7 +110,8 @@ DateBack app: Proprietary
 ## 🔗 Links
 
 - **Website:** [dateback.app](https://dateback.app)
-- **Purchase:** [Buy DateBack](https://buy.polar.sh/polar_cl_F1R601XKoGREXw1PxwvhUVIYz859VlG83okyn2I1WCI)
+- **Download:** [Latest Mac release](https://github.com/giovanni-lunetta/dateback-releases/releases/latest)
+- **Optional support:** [Buy Me A Coffee](https://www.buymeacoffee.com/dateback)
 - **Support:** Contact form on website
 - **App Repository:** Private
 

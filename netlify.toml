@@ -31,7 +31,7 @@
     # - frame-src: Allow YouTube embeds (for video iframes)
     # - frame-ancestors 'none': Prevent embedding in iframes (same as X-Frame-Options)
     # - base-uri 'self': Prevent <base> tag hijacking
-    # - form-action: Allow forms to submit to self and Polar.sh payment
+    # - form-action: Allow forms to submit to self
     Content-Security-Policy = """
       default-src 'self';
       script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
@@ -42,7 +42,7 @@
       frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
       frame-ancestors 'none';
       base-uri 'self';
-      form-action 'self' https://buy.polar.sh;
+      form-action 'self';
       upgrade-insecure-requests;
     """
 
