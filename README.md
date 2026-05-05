@@ -49,7 +49,7 @@ unset GH_TOKEN
 gh repo view giovanni-lunetta/dateback-releases --json latestRelease,visibility --jq '{visibility:.visibility, latestTag:.latestRelease.tagName}'
 ```
 
-For the free-download launch, this must return `PUBLIC` and `v1.3.0`. Deploying before that would advertise the free/no-activation app while the download page can still serve the older activation build.
+For the current free-download launch, this must return `PUBLIC` and the version shown on the home page. Deploying before that would advertise one app version while the download page can still serve an older build.
 
 ## 📁 Project Structure
 
