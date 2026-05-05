@@ -1,5 +1,5 @@
 # Netlify Security Headers Configuration
-# Place this file in: MemSavr_Website/netlify.toml
+# Place this file in: DateBack_Website/netlify.toml
 
 # Security Headers for All Pages
 [[headers]]
@@ -76,11 +76,11 @@
     Cache-Control = "public, max-age=3600"
 
 # INSTRUCTIONS:
-# 1. Copy this file to: MemSavr_Website/netlify.toml
+# 1. Copy this file to: DateBack_Website/netlify.toml
 # 2. Commit to git: git add netlify.toml && git commit -m "security: add security headers"
 # 3. Deploy to Netlify: git push
 # 4. Verify headers:
-#    curl -I https://savemymemories.app/ | grep -E "(CSP|X-Frame|X-Content)"
+#    curl -I https://dateback.app/ | grep -E "(CSP|X-Frame|X-Content)"
 #
 # Expected output:
 #   x-frame-options: DENY
