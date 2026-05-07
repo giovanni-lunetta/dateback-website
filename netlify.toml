@@ -23,22 +23,22 @@
     # Content Security Policy (CSP)
     # Explanation of directives:
     # - default-src 'self': Only load resources from same origin by default
-    # - script-src: Allow scripts from self, inline (for gtag), and Google Analytics
+    # - script-src: Allow scripts from self and inline page handlers
     # - style-src: Allow styles from self and inline (for dynamic styles)
     # - img-src: Allow images from self, data: URIs, and any HTTPS source
     # - font-src: Allow fonts from self and data: URIs
-    # - connect-src: Allow connections to self and Google Analytics
+    # - connect-src: Allow connections to self
     # - frame-src: Allow YouTube embeds (for video iframes)
     # - frame-ancestors 'none': Prevent embedding in iframes (same as X-Frame-Options)
     # - base-uri 'self': Prevent <base> tag hijacking
     # - form-action: Allow forms to submit to self
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+      script-src 'self' 'unsafe-inline';
       style-src 'self' 'unsafe-inline';
       img-src 'self' data: https:;
       font-src 'self' data:;
-      connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+      connect-src 'self';
       frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
       frame-ancestors 'none';
       base-uri 'self';

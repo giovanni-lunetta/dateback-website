@@ -18,7 +18,6 @@ DateBack is a macOS app that processes Snapchat Memories exports, fixing metadat
 - **Hosting:** Netlify
 - **Security:** Content Security Policy, security headers
 - **Forms:** Netlify Forms
-- **Analytics:** Google Analytics
 
 ## 🚀 Local Development
 
@@ -111,13 +110,9 @@ DateBack app: Proprietary
 
 - **Website:** [dateback.app](https://dateback.app)
 - **Download:** [Latest Mac release](https://github.com/giovanni-lunetta/dateback-releases/releases/latest)
-- **Optional support:** [Buy Me A Coffee](https://www.buymeacoffee.com/dateback)
+- **Optional support:** [Buy Me A Coffee](https://www.buymeacoffee.com/giovannilunetta)
 - **Support:** Contact form on website
 - **App Repository:** Private
-
-## 📊 Analytics
-
-This website uses Google Analytics to understand visitor behavior. No personally identifiable information is collected.
 
 ## 🙏 Acknowledgments
 

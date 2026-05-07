@@ -12,7 +12,7 @@ const htmlFiles = [
     'changelog.html'
 ];
 const freeDownloadUrl = 'https://github.com/giovanni-lunetta/dateback-releases/releases/latest';
-const donationUrl = 'https://www.buymeacoffee.com/dateback';
+const donationUrl = 'https://www.buymeacoffee.com/giovannilunetta';
 
 function read(file) {
     return fs.readFileSync(path.join(root, file), 'utf8');
@@ -30,12 +30,29 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.3.1'), 'home page should present the current free-model release version');
+    assert.ok(source.includes('v1.4.0'), 'home page should present the current free-model release version');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
     assert.equal(source.includes('Activate License'), false);
     assert.equal(source.includes('Secure payment via Polar.sh'), false);
+});
+
+test('public pages preserve the no-tracking promise', () => {
+    for (const file of htmlFiles) {
+        const source = read(file);
+        assert.equal(source.includes('googletagmanager.com'), false, `${file} must not load Google Tag Manager`);
+        assert.equal(source.includes('google-analytics.com'), false, `${file} must not load Google Analytics`);
+        assert.equal(source.includes('gtag('), false, `${file} must not include Google Analytics gtag calls`);
+    }
+});
+
+test('public pages rely on normal Buy Me A Coffee links instead of the widget script', () => {
+    for (const file of htmlFiles) {
+        const source = read(file);
+        assert.equal(source.includes('cdnjs.buymeacoffee.com'), false, `${file} must not load the Buy Me A Coffee widget`);
+        assert.equal(source.includes('data-name="BMC-Widget"'), false, `${file} must not include the Buy Me A Coffee widget markup`);
+    }
 });
 
 test('legal pages describe free app and optional external donations', () => {
