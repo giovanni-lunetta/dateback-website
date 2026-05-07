@@ -499,9 +499,9 @@
 
                 <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
                     class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <a href="https://www.buymeacoffee.com/dateback"
-                    class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
-                    style="margin-top: 0.75rem;">Support on Buy Me A Coffee</a>
+                <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem;">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 48px; width: 174px; border-radius: 8px;">
+                </a>
 
                 <p style="margin-top: 1.5rem; font-size: 0.9rem;">
                     Download the latest notarized Mac release from GitHub.
@@ -555,11 +555,20 @@
 
                 <details class="faq-item">
                     <summary>How does setup work?</summary>
-                    <p>DateBack walks you through five steps: (1) select your downloaded Snapchat ZIP — drag-and-drop,
-                        browse, or use the auto-find button; (2) choose where memories will be stored; (3) review the
-                        storage check; (4) pick Computer or Cloud mode; (5) if you chose Cloud, select a destination
-                        folder and optionally adjust Advanced settings. If you don't choose a folder, memories are saved
-                        to <strong>~/Pictures/SnapchatMemories</strong> by default.</p>
+                    <p>DateBack walks you through five steps: (1) open the app — it automatically finds your downloaded
+                        Snapchat ZIP files; (2) choose where memories will be stored; (3) review the storage check; (4)
+                        pick Computer or Cloud mode; (5) if you chose Cloud, select a destination folder and optionally
+                        adjust Advanced settings. If you don't choose a folder, memories are saved to
+                        <strong>~/Pictures/SnapchatMemories</strong> by default.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Snapchat gave me multiple ZIP files. What do I do?</summary>
+                    <p>This is normal for large Snapchat exports. You'll see files named like
+                        <strong>mydata~[timestamp].zip</strong>, <strong>mydata~[timestamp]-1.zip</strong>,
+                        <strong>mydata~[timestamp]-2.zip</strong>, and so on. Download each one from Snapchat's download
+                        page and save them all to the same folder — Downloads works fine. When you open DateBack, it
+                        automatically finds all the files from the same export and processes them together as one.</p>
                 </details>
 
                 <details class="faq-item">
@@ -576,7 +585,7 @@
                     <summary>Is DateBack really free?</summary>
                     <p>Yes. DateBack is a free download and does not require an account, payment, or activation key.
                         If it helps you recover your memories, you can optionally
-                        <a href="https://www.buymeacoffee.com/dateback" target="_blank" rel="noopener noreferrer">support the project on Buy Me A Coffee</a>.
+                        <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer">support the project on Buy Me A Coffee</a>.
                     </p>
                 </details>
 
@@ -645,6 +654,16 @@
                         your output folder, re-run processing with the same folder selected, or navigate to it manually
                         in Finder. In Cloud Mode this button opens your cloud destination folder, not the local output
                         folder.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>DateBack found fewer ZIP files than I downloaded from Snapchat</summary>
+                    <p>DateBack looks for all ZIP files from the same export in the same folder. Make sure every file
+                        you downloaded (<strong>mydata~[timestamp].zip</strong>,
+                        <strong>mydata~[timestamp]-1.zip</strong>, etc.) is in the same folder — don't move some to a
+                        subfolder or rename them. If you've already moved them around, put them all back together in one
+                        folder, then drag that folder into DateBack or click <strong>Find My Zip
+                            Automatically</strong>.</p>
                 </details>
             </div>
         </div>
@@ -749,8 +768,10 @@
                         <div class="step-header">
                             <div class="step-number">6</div>
                             <div class="step-text">
-                                <h3>Download the ZIP File</h3>
-                                <p>Click the blue <strong>Download</strong> button next to your data file.</p>
+                                <h3>Download the ZIP File(s)</h3>
+                                <p>Click the blue <strong>Download</strong> button next to your data file. If Snapchat
+                                    split your export into multiple files, you'll see several entries — download each one
+                                    and keep them all in the same folder when saving.</p>
                             </div>
                         </div>
                         <div class="step-image">
@@ -762,10 +783,12 @@
                         <div class="step-header">
                             <div class="step-number">7</div>
                             <div class="step-text">
-                                <h3>Locate the File</h3>
-                                <p>Open your "Downloads" folder. You should see a file named
-                                    <strong>mydata-numbers.zip</strong>. Do not unzip this yet—DateBack will handle it!
-                                </p>
+                                <h3>Locate the Files</h3>
+                                <p>Open your Downloads folder. You'll see one or more files named
+                                    <strong>mydata~[timestamp].zip</strong>,
+                                    <strong>mydata~[timestamp]-1.zip</strong>, etc. — all from the same export. Do not
+                                    unzip them and keep them in the same folder. DateBack will detect and handle them
+                                    automatically.</p>
                             </div>
                         </div>
                         <div class="step-image">
@@ -856,6 +879,17 @@
         </div>
     </section>
 
+    <!-- Buy Me a Coffee -->
+    <section id="support" style="padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem;">DateBack is <span class="gradient-text">free, forever.</span></h2>
+            <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem;">If it helped you recover memories you thought were lost, a coffee goes a long way toward keeping this project alive.</p>
+            <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px; border-radius: 8px;">
+            </a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-logo">DateBack<span>.app</span></div>
@@ -897,6 +931,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="giovannilunetta" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
 </body>
 
