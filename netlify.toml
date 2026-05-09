@@ -11,11 +11,14 @@
     # Prevent MIME sniffing attacks
     X-Content-Type-Options = "nosniff"
 
-    # XSS protection (legacy browsers - most modern browsers ignore this)
-    X-XSS-Protection = "1; mode=block"
+    # XSS protection header disabled per OWASP guidance (the legacy filter is itself a vulnerability in some browsers; CSP supersedes it)
+    X-XSS-Protection = "0"
 
     # Control referrer information
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Enforce HTTPS for the apex domain and subdomains
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
     # Restrict dangerous browser features
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
@@ -46,11 +49,35 @@
       upgrade-insecure-requests;
     """
 
-# Additional headers for HTML pages
+# Additional headers for HTML pages (both .html extension and Netlify pretty-URL paths)
 [[headers]]
   for = "/*.html"
   [headers.values]
-    # Cache control for HTML (do not cache)
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/install"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/changelog"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/privacy-policy"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/terms-of-service"
+  [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
 # Cache static assets (images, CSS, JS)
@@ -74,6 +101,26 @@
   [headers.values]
     Content-Type = "application/xml; charset=UTF-8"
     Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.otf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 # INSTRUCTIONS:
 # 1. Copy this file to: DateBack_Website/netlify.toml

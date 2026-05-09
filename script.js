@@ -178,7 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showSlide(index) {
         carouselImages.forEach(img => img.classList.remove('active'));
-        carouselDots.forEach(dot => dot.classList.remove('active'));
+        carouselDots.forEach((dot, i) => {
+            dot.classList.remove('active');
+            dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        });
 
         if (carouselImages[index]) {
             carouselImages[index].classList.add('active');
@@ -205,13 +208,52 @@ document.addEventListener('DOMContentLoaded', () => {
         arrowRight.addEventListener('click', nextSlide);
     }
 
-    // Dot click handlers
+    // Dot click and keyboard handlers
     carouselDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             currentSlide = index;
             showSlide(currentSlide);
         });
+        dot.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                currentSlide = index;
+                showSlide(currentSlide);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+                carouselDots[currentSlide] && carouselDots[currentSlide].focus();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextSlide();
+                carouselDots[currentSlide] && carouselDots[currentSlide].focus();
+            }
+        });
     });
+
+    // Arrow-key navigation when the carousel area itself is focused
+    const carouselWrapper = document.querySelector('.carousel-wrapper') || document.querySelector('.carousel');
+    if (carouselWrapper) {
+        carouselWrapper.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+            if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); }
+        });
+    }
+
+    // Touch swipe support
+    let touchStartX = 0;
+    const carouselContainer = document.querySelector('.carousel-images') || (arrowLeft && arrowLeft.closest('div'));
+    if (carouselContainer) {
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        carouselContainer.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 40) {
+                if (dx < 0) nextSlide(); else prevSlide();
+            }
+        }, { passive: true });
+    }
 
     // ========================================
     // 7. Smooth Scroll for Nav Links
@@ -287,13 +329,18 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMsg.style.display = 'none';
 
             try {
-                // Create FormData from the form
                 const formData = new FormData(form);
+                const fileInput = document.getElementById('contact-attachments');
+                const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
 
-                // Submit to Netlify
                 const response = await fetch('/', {
                     method: 'POST',
-                    body: formData
+                    ...(hasFile
+                        ? { body: formData }
+                        : {
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: new URLSearchParams(formData).toString()
+                        })
                 });
 
                 if (response.ok) {

@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changelog | DateBack</title>
     <meta name="description" content="DateBack release notes and version history. See what's new in each update.">
+    <meta property="og:title" content="Changelog | DateBack">
+    <meta property="og:description" content="DateBack release notes and version history. See what's new in each update.">
+    <meta property="og:url" content="https://dateback.app/changelog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Changelog | DateBack">
+    <meta name="twitter:description" content="DateBack release notes and version history. See what's new in each update.">
+    <meta name="twitter:image" content="https://dateback.app/images/og-image.jpg">
     <link rel="canonical" href="https://dateback.app/changelog.html">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -31,7 +42,7 @@
             <div class="nav-right">
                 <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
                     class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
             </div>
         </div>
 
@@ -47,6 +58,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- CHANGELOG HEADER -->
     <section class="hero" style="padding: 6rem 0 3rem;">
         <div class="container">
@@ -63,8 +75,21 @@
     <section id="release-notes" style="padding-top: 2rem;">
         <div class="container">
             <div class="changelog-container">
-                <!-- v1.4.0 - Latest (Expanded by default) -->
+                <!-- v1.4.1 - Latest (Expanded by default) -->
                 <details class="changelog-entry" open>
+                    <summary class="changelog-version">
+                        <span class="version-badge">v1.4.1</span>
+                        <span class="version-date">May 9, 2026</span>
+                    </summary>
+                    <ul class="changelog-list">
+                        <li>Release — Corrected bundled third-party notices and GPL written-offer language</li>
+                        <li>Reliability — Improved Snapchat HEAD retry handling for throttled responses</li>
+                        <li>Website — Updated social preview metadata, sitemap priorities, and release validation tests</li>
+                    </ul>
+                </details>
+
+                <!-- v1.4.0 -->
+                <details class="changelog-entry">
                     <summary class="changelog-version">
                         <span class="version-badge">v1.4.0</span>
                         <span class="version-date">May 6, 2026</span>
@@ -333,6 +358,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer>
         <div class="container">
             <div class="footer-logo">DateBack<span>.app</span></div>
@@ -345,7 +372,7 @@
                 <a href="mailto:support@dateback.app">Contact</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-of-service.html">Terms of Service</a>
-                <a href="https://dateback.app/licenses/ffmpeg-source.zip">Open Source / Licenses</a>
+                <a href="licenses.html">Open Source / Licenses</a>
             </div>
 
             <p style="font-size: 0.85rem; color: var(--text-muted);">

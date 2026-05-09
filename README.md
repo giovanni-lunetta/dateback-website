@@ -2,8 +2,6 @@
 
 Official website for [DateBack](https://dateback.app) - Archive your Snapchat Memories the right way.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-BADGE-ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
-
 ## 🌐 Live Site
 
 **Production:** [https://dateback.app](https://dateback.app)

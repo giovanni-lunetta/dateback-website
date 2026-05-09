@@ -14,14 +14,14 @@
         content="The only tool that fixes dates and metadata. Don't lose your past—archive memories the right way.">
     <meta property="og:url" content="https://dateback.app/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://dateback.app/images/og-image.png">
+    <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DateBack | Archive Memories the Right Way">
     <meta name="twitter:description"
         content="The only tool that fixes dates and metadata. Don't lose your past—archive memories the right way.">
-    <meta name="twitter:image" content="https://dateback.app/images/og-image.png">
+    <meta name="twitter:image" content="https://dateback.app/images/og-image.jpg">
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -33,7 +33,7 @@
 
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <img src="images/logo.png" alt="DateBack logo" class="logo-img">
                 DateBack<span>.app</span>
             </a>
@@ -50,7 +50,7 @@
             <div class="nav-right">
                 <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
                     class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+                <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
             </div>
         </div>
 
@@ -67,9 +67,10 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- HERO -->
     <section class="hero" id="top">
-        <div class="container" id="main-content">
+        <div class="container">
             <div class="hero-badges">
                 <span class="hero-badge-pill">🍎 Apple Notarized</span>
                 <span class="hero-badge-pill">💻 Runs 100% Locally</span>
@@ -104,9 +105,9 @@
                     </div>
                     <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">›</button>
                 </div>
-                <div class="carousel-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
+                <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
+                    <span class="dot active" data-index="0" role="button" tabindex="0" aria-label="Slide 1" aria-selected="true"></span>
+                    <span class="dot" data-index="1" role="button" tabindex="0" aria-label="Slide 2" aria-selected="false"></span>
                 </div>
             </div>
         </div>
@@ -264,7 +265,7 @@
         <div class="container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto;">
                 <h2>How <span class="gradient-text">DateBack</span> Works</h2>
-                <p>Three simple steps to archive memories the right way.</p>
+                <p>The gist — what DateBack does in about 60 seconds.</p>
             </div>
 
             <div class="steps-grid">
@@ -492,14 +493,14 @@
                 <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
                     class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download for Mac</a>
                 <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem;">
-                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 48px; width: 174px; border-radius: 8px;">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="174" height="48" style="height: 48px; width: 174px; border-radius: 8px;">
                 </a>
 
                 <p style="margin-top: 1.5rem; font-size: 0.9rem;">
                     Download the latest notarized Mac release from GitHub.
                 </p>
                 <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
-                    Current version: <a href="changelog.html" style="color: var(--accent-blue);">v1.4.0</a>
+                    Current version: <a href="changelog.html" style="color: var(--accent-blue);">v1.4.1</a>
                 </p>
                 <p style="margin-top: 0.75rem;">
                     <a href="/install.html" class="install-guide-link">Installation guide &rarr;</a>
@@ -690,8 +691,11 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP1.png"
-                                alt="Select Export your Memories and Export JSON Files" loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP1.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP1.png"
+                                    alt="Select Export your Memories and Export JSON Files" loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -707,8 +711,11 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP2.png" alt="Choose All Time date range"
-                                loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP2.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP2.png" alt="Choose All Time date range"
+                                    loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -722,7 +729,10 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP3.png" alt="Processing status screen" loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP3.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP3.png" alt="Processing status screen" loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -736,7 +746,10 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP4.png" alt="Email notification" loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP4.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP4.png" alt="Email notification" loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -752,7 +765,10 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP5.png" alt="Your exports section" loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP5.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP5.png" alt="Your exports section" loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -767,7 +783,10 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP6.png" alt="Download button" loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP6.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP6.png" alt="Download button" loading="lazy">
+                            </picture>
                         </div>
                     </div>
 
@@ -784,8 +803,11 @@
                             </div>
                         </div>
                         <div class="step-image">
-                            <img src="images/DownloadSnapchatDataP7.png" alt="ZIP file in Downloads folder"
-                                loading="lazy">
+                            <picture>
+                                <source srcset="images/DownloadSnapchatDataP7.webp" type="image/webp">
+                                <img src="images/DownloadSnapchatDataP7.png" alt="ZIP file in Downloads folder"
+                                    loading="lazy">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -877,10 +899,12 @@
             <h2 style="margin-bottom: 1rem;">DateBack is <span class="gradient-text">free, forever.</span></h2>
             <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem;">If it helped you recover memories you thought were lost, a coffee goes a long way toward keeping this project alive.</p>
             <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px; border-radius: 8px;">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" style="height: 60px; width: 217px; border-radius: 8px;">
             </a>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container">
@@ -893,7 +917,7 @@
                 <a href="#faq">FAQ</a>
                 <a href="changelog.html">Changelog</a>
                 <a href="#" onclick="openContactModal(); return false;">Contact</a>
-                <a href="https://dateback.app/licenses/ffmpeg-source.zip">Open Source / Licenses</a>
+                <a href="licenses.html">Open Source / Licenses</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-of-service.html">Terms of Service</a>
             </div>

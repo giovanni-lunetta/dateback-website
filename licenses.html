@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Licenses | DateBack</title>
+    <meta name="description" content="DateBack open source licenses and third-party software notices.">
+    <meta property="og:title" content="Open Source Licenses | DateBack">
+    <meta property="og:description" content="DateBack open source licenses and third-party software notices.">
+    <meta property="og:url" content="https://dateback.app/licenses.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Open Source Licenses | DateBack">
+    <meta name="twitter:description" content="DateBack open source licenses and third-party software notices.">
+    <meta name="twitter:image" content="https://dateback.app/images/og-image.jpg">
+    <link rel="canonical" href="https://dateback.app/licenses.html">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .legal-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+            line-height: 1.7;
+        }
+
+        .legal-body h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-body h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .legal-body h3 {
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .legal-body p,
+        .legal-body li {
+            color: var(--text-muted);
+        }
+
+        .legal-body ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .source-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .source-link:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .dep-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .dep-table th,
+        .dep-table td {
+            text-align: left;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dep-table th {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .dep-table td {
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DateBack logo" class="logo-img">
+                DateBack<span>.app</span>
+            </a>
+
+            <div class="nav-center">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="changelog.html">Changelog</a>
+                <a href="mailto:support@dateback.app">Support</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
+                    class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
+                <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="changelog.html">Changelog</a>
+            <a href="mailto:support@dateback.app">Support</a>
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta"
+                style="margin: 1rem 20px; display: inline-block; text-align: center;" target="_blank"
+                rel="noopener noreferrer">Download for Mac</a>
+        </div>
+    </nav>
+
+    <main class="legal-body">
+        <h1>Open Source Licenses</h1>
+        <p class="last-updated"><strong>Last Updated:</strong> May 9, 2026 &middot; DateBack v1.4.1</p>
+
+        <p>DateBack bundles or depends on the following open source components. Full license texts are included
+            in the application bundle and are available below.</p>
+
+        <h2>FFmpeg (GPL-2.0+)</h2>
+
+        <p>DateBack ships a pre-built <strong>FFmpeg</strong> binary (<code>ffmpeg</code>) used to restore correct
+            creation-date metadata on video and image files. FFmpeg is licensed under the
+            <strong>GNU General Public License, version 2 or later (GPL-2.0+)</strong>.
+        </p>
+
+        <p>In accordance with the GPL, the complete corresponding source code for the exact FFmpeg binary distributed
+            with DateBack is available at no charge:</p>
+
+        <a class="source-link" href="https://dateback.app/licenses/ffmpeg-source.zip">
+            ⬇ Download FFmpeg source (ZIP, ~19 MB)
+        </a>
+
+        <p style="margin-top: 1rem;">The full text of GPL-2.0 is available here:</p>
+        <a class="source-link" href="https://dateback.app/licenses/GPL-2.0.txt">
+            📄 GPL-2.0 License Text
+        </a>
+
+        <h2>Electron &amp; Node.js Runtime</h2>
+
+        <p>DateBack is built with <strong>Electron</strong> (MIT), which bundles <strong>Chromium</strong> (BSD/MIT)
+            and <strong>Node.js</strong> (MIT). License files for these components are included inside the application
+            bundle at <code>DateBack.app/Contents/Resources/licenses/</code>.</p>
+
+        <h2>Python Runtime (PyInstaller bundle)</h2>
+
+        <p>The <code>memory-organizer</code> helper binary is a frozen Python application built with
+            <strong>PyInstaller</strong> (GPL-2.0 with the standard bootloader exception for bundled apps). The
+            Python interpreter included in the bundle is licensed under the
+            <strong>Python Software Foundation License (PSF)</strong>.
+        </p>
+
+        <h2>Python Libraries</h2>
+
+        <table class="dep-table">
+            <thead>
+                <tr>
+                    <th>Library</th>
+                    <th>Version</th>
+                    <th>License</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pillow</td>
+                    <td>12.0.0</td>
+                    <td>HPND (MIT-compatible)</td>
+                </tr>
+                <tr>
+                    <td>requests</td>
+                    <td>2.32.3</td>
+                    <td>Apache-2.0</td>
+                </tr>
+                <tr>
+                    <td>urllib3</td>
+                    <td>2.3.0</td>
+                    <td>MIT</td>
+                </tr>
+                <tr>
+                    <td>certifi</td>
+                    <td>2025.1.31</td>
+                    <td>MPL-2.0</td>
+                </tr>
+                <tr>
+                    <td>charset-normalizer</td>
+                    <td>3.4.1</td>
+                    <td>MIT</td>
+                </tr>
+                <tr>
+                    <td>idna</td>
+                    <td>3.10</td>
+                    <td>BSD-3-Clause</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>npm Production Dependencies</h2>
+
+        <p>All production npm dependencies use permissive licenses (MIT, ISC, BSD-2-Clause, BlueOak-1.0.0, and
+            Python-2.0/PSF). There are no GPL or AGPL packages in the production bundle.</p>
+
+        <table class="dep-table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Version</th>
+                    <th>License</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>adm-zip</td>
+                    <td>0.5.16</td>
+                    <td>MIT</td>
+                </tr>
+                <tr>
+                    <td>check-disk-space</td>
+                    <td>3.4.0</td>
+                    <td>MIT</td>
+                </tr>
+                <tr>
+                    <td>dotenv</td>
+                    <td>16.6.1</td>
+                    <td>BSD-2-Clause</td>
+                </tr>
+                <tr>
+                    <td>electron-updater</td>
+                    <td>6.8.3</td>
+                    <td>MIT</td>
+                </tr>
+                <tr>
+                    <td>glob</td>
+                    <td>13.0.0</td>
+                    <td>BlueOak-1.0.0</td>
+                </tr>
+                <tr>
+                    <td>argparse (transitive)</td>
+                    <td>2.0.1</td>
+                    <td>Python-2.0 (PSF) — permissive</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Questions</h2>
+        <p>If you have questions about our open source usage or need a physical copy of any license, contact us at
+            <a href="mailto:support@dateback.app">support@dateback.app</a>.
+        </p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">DateBack<span>.app</span></div>
+
+            <div class="footer-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#export-guide">Export Guide</a>
+                <a href="install.html">Install Guide</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="changelog.html">Changelog</a>
+                <a href="mailto:support@dateback.app">Contact</a>
+                <a href="licenses.html">Open Source / Licenses</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+                Requires macOS 11+ and Apple Silicon (M1, M2, M3, or M4)
+            </p>
+
+            <p>&copy; 2026 Giovanni Lunetta. All rights reserved.</p>
+
+            <p class="disclaimer">
+                DateBack is a third-party utility and is not affiliated with, endorsed by, or sponsored by any social
+                media platform.
+                All trademarks are property of their respective owners. Use of platform names is for descriptive
+                purposes only under nominative fair use.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -39,7 +39,10 @@ Temporary Items
 
 # Build outputs (if any)
 dist/
+dist-qa/
 build/
+node_modules/
+.netlify/
 
 # Internal audit / working notes (do not publish)
 LEGAL_DIFF_NOTES.md

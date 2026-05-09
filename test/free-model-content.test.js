@@ -11,8 +11,17 @@ const htmlFiles = [
     'terms-of-service.html',
     'changelog.html'
 ];
+const allHtmlFiles = [
+    ...htmlFiles,
+    'licenses.html'
+];
 const freeDownloadUrl = 'https://github.com/giovanni-lunetta/dateback-releases/releases/latest';
 const donationUrl = 'https://www.buymeacoffee.com/giovannilunetta';
+const primaryPages = [
+    'index.html',
+    'install.html',
+    'changelog.html'
+];
 
 function read(file) {
     return fs.readFileSync(path.join(root, file), 'utf8');
@@ -30,7 +39,7 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.4.0'), 'home page should present the current free-model release version');
+    assert.ok(source.includes('v1.4.1'), 'home page should present the current free-model release version');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
@@ -81,4 +90,95 @@ test('public changelog uses neutral copy for retired paid-model details', () => 
 
     assert.equal(source.includes('14-day money-back guarantee'), false);
     assert.equal(source.includes('licensing QA mode'), false);
+});
+
+test('Netlify launch headers include HSTS while preserving documented CSP', () => {
+    const source = read('netlify.toml');
+
+    assert.match(source, /Strict-Transport-Security\s*=\s*"max-age=31536000; includeSubDomains; preload"/);
+    assert.ok(source.includes('Content-Security-Policy = """'));
+    assert.ok(source.includes("# Content Security Policy (CSP)"));
+    assert.ok(source.includes("upgrade-insecure-requests;"));
+});
+
+test('redirects canonicalize www dateback domain to apex HTTPS', () => {
+    const source = read('_redirects');
+
+    assert.ok(
+        source.includes('https://www.dateback.app/* https://dateback.app/:splat 301!'),
+        'www DateBack HTTPS requests should permanently redirect to the apex domain'
+    );
+});
+
+test('CSS exposes legacy variable aliases used by website components', () => {
+    const source = read('styles.css');
+
+    for (const variable of [
+        '--text-primary',
+        '--text-secondary',
+        '--accent-blue',
+        '--accent-green',
+        '--bg-section'
+    ]) {
+        assert.match(source, new RegExp(`${variable}:\\s*var\\(--`), `${variable} should map to an existing design token`);
+    }
+});
+
+test('contact form fields have a visible scoped focus treatment', () => {
+    const source = read('styles.css');
+
+    assert.match(source, /\.contact-modal\s+\.form-group\s+(?:input|textarea):focus-visible/);
+    assert.match(source, /box-shadow:\s*0 0 0 3px rgba\(136,\s*189,\s*242,\s*0\.28\)/);
+});
+
+test('mobile menu buttons declare explicit button type', () => {
+    for (const file of htmlFiles) {
+        const source = read(file);
+        const matches = source.match(/<button[^>]*class="mobile-menu-btn"[^>]*>/g) || [];
+
+        assert.ok(matches.length > 0, `${file} should include a mobile menu button`);
+        for (const match of matches) {
+            assert.match(match, /\stype="button"/, `${file} mobile menu button should not default to submit`);
+        }
+    }
+});
+
+test('primary pages expose a main content landmark target', () => {
+    for (const file of primaryPages) {
+        const source = read(file);
+
+        assert.match(source, /<main\b[^>]*id="main-content"/, `${file} should include <main id="main-content">`);
+        assert.match(source, /<\/main>/, `${file} should close the main landmark before footer content`);
+    }
+});
+
+test('website license references DateBack rather than stale app names', () => {
+    const source = read('LICENSE');
+
+    assert.ok(source.includes('The DateBack application'));
+    assert.equal(source.includes('MemSavr'), false);
+});
+
+test('all public HTML pages declare 1200 by 630 social image metadata', () => {
+    for (const file of allHtmlFiles) {
+        const source = read(file);
+
+        assert.match(source, /<meta property="og:image" content="https:\/\/dateback\.app\/images\/og-image\.jpg">/);
+        assert.match(source, /<meta property="og:image:width" content="1200">/, `${file} should declare OG width`);
+        assert.match(source, /<meta property="og:image:height" content="630">/, `${file} should declare OG height`);
+    }
+});
+
+test('sitemap orders higher-priority pages before lower-priority pages', () => {
+    const source = read('sitemap.xml');
+    const priorities = [...source.matchAll(/<url>[\s\S]*?<priority>([0-9.]+)<\/priority>[\s\S]*?<\/url>/g)]
+        .map((match) => Number(match[1]));
+
+    assert.ok(priorities.length > 0, 'sitemap should include priority values');
+    for (let index = 1; index < priorities.length; index += 1) {
+        assert.ok(
+            priorities[index - 1] >= priorities[index],
+            `priority ${priorities[index - 1]} should be >= following priority ${priorities[index]}`
+        );
+    }
 });
