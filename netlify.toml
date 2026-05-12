@@ -28,7 +28,7 @@
     # - default-src 'self': Only load resources from same origin by default
     # - script-src: Allow scripts from self and inline page handlers
     # - style-src: Allow styles from self and inline (for dynamic styles)
-    # - img-src: Allow images from self, data: URIs, and any HTTPS source
+    # - img-src: Allow local images, data: URIs, and the static Buy Me A Coffee button image host
     # - font-src: Allow fonts from self and data: URIs
     # - connect-src: Allow connections to self
     # - frame-src: Allow YouTube embeds (for video iframes)
@@ -39,7 +39,7 @@
       default-src 'self';
       script-src 'self' 'unsafe-inline';
       style-src 'self' 'unsafe-inline';
-      img-src 'self' data: https:;
+      img-src 'self' data: https://cdn.buymeacoffee.com;
       font-src 'self' data:;
       connect-src 'self';
       frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;

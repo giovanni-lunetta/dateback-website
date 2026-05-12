@@ -22,6 +22,12 @@ const primaryPages = [
     'install.html',
     'changelog.html'
 ];
+const appProductionDependencies = [
+    ['adm-zip', '0.5.17'],
+    ['check-disk-space', '3.4.0'],
+    ['electron-updater', '6.8.3'],
+    ['glob', '13.0.6']
+];
 
 function read(file) {
     return fs.readFileSync(path.join(root, file), 'utf8');
@@ -39,7 +45,7 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.4.1'), 'home page should present the current free-model release version');
+    assert.ok(source.includes('v1.4.2'), 'home page should present the current free-model release version');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
@@ -71,11 +77,12 @@ test('legal pages describe free app and optional external donations', () => {
     assert.equal(terms.includes('Polar.sh'), false);
     assert.equal(privacy.includes('Polar.sh'), false);
     assert.ok(terms.includes('Last Updated:</strong> May 5, 2026'));
-    assert.ok(privacy.includes('Last Updated:</strong> May 5, 2026'));
+    assert.ok(privacy.includes('Last Updated:</strong> May 12, 2026'));
     assert.ok(terms.includes('DateBack is currently provided as a free download'));
     assert.ok(terms.includes('Optional donations are processed by Buy Me A Coffee'));
     assert.ok(privacy.includes('DateBack does not require a license key'));
     assert.ok(privacy.includes('Optional donations are handled by Buy Me A Coffee'));
+    assert.ok(privacy.includes('GDPR and CCPA Notes'));
 });
 
 test('install page reflects current free release size guidance', () => {
@@ -99,6 +106,8 @@ test('Netlify launch headers include HSTS while preserving documented CSP', () =
     assert.ok(source.includes('Content-Security-Policy = """'));
     assert.ok(source.includes("# Content Security Policy (CSP)"));
     assert.ok(source.includes("upgrade-insecure-requests;"));
+    assert.ok(source.includes("img-src 'self' data: https://cdn.buymeacoffee.com;"));
+    assert.equal(source.includes("img-src 'self' data: https:;"), false);
 });
 
 test('redirects canonicalize www dateback domain to apex HTTPS', () => {
@@ -157,6 +166,22 @@ test('website license references DateBack rather than stale app names', () => {
 
     assert.ok(source.includes('The DateBack application'));
     assert.equal(source.includes('MemSavr'), false);
+});
+
+test('website open source license page matches current app production dependencies', () => {
+    const source = read('licenses.html');
+
+    for (const [name, version] of appProductionDependencies) {
+        assert.match(source, new RegExp(`<td>${name}</td>\\s*<td>${version}</td>`));
+    }
+
+    assert.equal(source.includes('<td>dotenv</td>'), false, 'dotenv is dev-only and should not be listed as production');
+    assert.equal(source.includes('<td>0.5.16</td>'), false, 'adm-zip version should not be stale');
+    assert.equal(source.includes('<td>13.0.0</td>'), false, 'glob version should not be stale');
+    assert.ok(fs.existsSync(path.join(root, 'licenses', 'PYTHON-PSF-LICENSE.txt')));
+    assert.ok(fs.existsSync(path.join(root, 'licenses', 'PILLOW-HPND-LICENSE.txt')));
+    assert.ok(source.includes('PYTHON-PSF-LICENSE.txt'));
+    assert.ok(source.includes('PILLOW-HPND-LICENSE.txt'));
 });
 
 test('all public HTML pages declare 1200 by 630 social image metadata', () => {
