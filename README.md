@@ -102,7 +102,7 @@ Found a typo or bug? Contributions are welcome!
 ## 📝 License
 
 Website code: **MIT License** (see [LICENSE](LICENSE))  
-DateBack app: Proprietary
+DateBack app builds and update metadata are distributed from the public [dateback-releases](https://github.com/giovanni-lunetta/dateback-releases) repository.
 
 ## 🔗 Links
 
@@ -110,7 +110,7 @@ DateBack app: Proprietary
 - **Download:** [Latest Mac release](https://github.com/giovanni-lunetta/dateback-releases/releases/latest)
 - **Optional support:** [Buy Me A Coffee](https://www.buymeacoffee.com/giovannilunetta)
 - **Support:** Contact form on website
-- **App Repository:** Private
+- **App Releases Repository:** [giovanni-lunetta/dateback-releases](https://github.com/giovanni-lunetta/dateback-releases)
 
 ## 🙏 Acknowledgments
 

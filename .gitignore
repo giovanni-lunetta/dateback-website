@@ -31,11 +31,16 @@ Temporary Items
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Environment files (if any get added accidentally)
+.env*
 .env
 .env.local
 .env.*.local
+!.env.example
 
 # Build outputs (if any)
 dist/
@@ -43,6 +48,34 @@ dist-qa/
 build/
 node_modules/
 .netlify/
+coverage/
+
+# Local/generated artifacts that should not ship publicly
+*.zip
+!licenses/ffmpeg-source.zip
+*.dmg
+*.pkg
+*.app/
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.tsv
+*.har
+*.webarchive
+*.crash
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.backup
+*.local
+*.local.md
+*.private.md
+*_internal_notes*/
+docs/archive/
+_LOCAL_ONLY/
 
 # Internal audit / working notes (do not publish)
 LEGAL_DIFF_NOTES.md

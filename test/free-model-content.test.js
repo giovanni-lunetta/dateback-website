@@ -33,6 +33,10 @@ function read(file) {
     return fs.readFileSync(path.join(root, file), 'utf8');
 }
 
+function readBuffer(file) {
+    return fs.readFileSync(path.join(root, file));
+}
+
 test('public pages use GitHub Releases for the free Mac download', () => {
     for (const file of htmlFiles) {
         const source = read(file);
@@ -166,6 +170,62 @@ test('website license references DateBack rather than stale app names', () => {
 
     assert.ok(source.includes('The DateBack application'));
     assert.equal(source.includes('MemSavr'), false);
+});
+
+test('README points public app distribution copy at the public GitHub repo', () => {
+    const source = read('README.md');
+
+    assert.equal(source.includes('App Repository:** Private'), false);
+    assert.equal(source.includes('App Repository: Private'), false);
+    assert.ok(source.includes('https://github.com/giovanni-lunetta/dateback-releases'));
+    assert.ok(source.includes('Latest Mac release'));
+});
+
+test('public hygiene ignores generated and local-only files while keeping bundled source archives', () => {
+    const source = read('.gitignore');
+
+    for (const pattern of [
+        '*.zip',
+        '!licenses/ffmpeg-source.zip',
+        '*.dmg',
+        '*.pkg',
+        '*.sqlite',
+        '*.csv',
+        '*.har',
+        '*.webarchive',
+        '*.tmp',
+        '*.bak',
+        '*.orig',
+        'coverage/',
+        '.env*',
+        'docs/archive/',
+        '*.private.md'
+    ]) {
+        assert.match(source, new RegExp(`^${pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'm'));
+    }
+});
+
+test('repo-local website docs avoid personal local filesystem paths', () => {
+    const source = read('docs/MOBILE_TESTING_LOCAL_WEBSITE.md');
+
+    assert.equal(source.includes('/Users/'), false);
+    assert.equal(source.includes('DateBack_Business'), false);
+    assert.equal(source.includes('Business Ideas'), false);
+});
+
+test('public example image does not expose obvious EXIF device metadata', () => {
+    const bytes = readBuffer('images/example-lexi-2025.jpg');
+    const latin1 = bytes.toString('latin1');
+
+    for (const marker of [
+        'Exif',
+        'Apple',
+        'iPhone',
+        '18.6.2',
+        '2025:08:30 11:20:05'
+    ]) {
+        assert.equal(latin1.includes(marker), false, `example-lexi-2025.jpg should not include ${marker}`);
+    }
 });
 
 test('website open source license page matches current app production dependencies', () => {

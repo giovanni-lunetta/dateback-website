@@ -14,7 +14,7 @@ This guide explains how to view your local development version of the DateBack w
 Open the **Terminal** app and navigate to the website directory:
 
 ```bash
-cd /Users/giovanni-lunetta/DateBack_Business/DateBack_Website
+cd /path/to/DateBack_Website
 ```
 
 ---
