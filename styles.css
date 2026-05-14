@@ -5,7 +5,7 @@
     --bg-card: #2a3544;              /* Lighter storm blue */
     --bg-card-hover: #384959;        /* Darkest blue from palette */
     --text-main: #f8fafc;            /* Clean white */
-    --text-muted: #c4d4e1;           /* Soft blue-gray with stronger contrast */
+    --text-muted: #c8d6e4;
     --text-primary: var(--text-main);
     --text-secondary: var(--text-muted);
     --accent-primary: #88BDF2;       /* Sky blue (main accent) */
@@ -447,9 +447,35 @@ nav.scrolled .nav-container {
 }
 
 .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin-top: 2rem;
     animation: fadeInUp 0.6s ease-out 0.3s forwards;
     opacity: 0;
+}
+
+/* Remove the default left margin on secondary button when inside hero-buttons */
+.hero-buttons .btn-secondary {
+    margin-left: 0;
+}
+
+.btn-arch-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+    letter-spacing: 0.02em;
+}
+
+.download-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
 }
 
 .system-requirements {
@@ -2798,6 +2824,26 @@ footer p {
     margin-bottom: 0;
 }
 
+.install-chip-callout {
+    background: rgba(136, 189, 242, 0.08);
+    border: 1px solid rgba(136, 189, 242, 0.25);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.install-chip-callout strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--text-main);
+}
+
+.install-chip-callout p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
 .install-support {
     max-width: 720px;
     margin: 2.5rem auto 0;
@@ -2843,3 +2889,88 @@ footer p {
 .install-guide-link:hover {
     color: var(--accent-primary);
 }
+
+/* =============================================
+   Utility classes (replaces inline style="" attributes)
+   ============================================= */
+
+/* Section header wrappers */
+.section-intro        { text-align: center; max-width: 700px; margin: 0 auto; }
+.section-intro-wide   { text-align: center; max-width: 800px; margin: 0 auto; }
+.section-intro-wide-spaced { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
+
+/* Heading alignments */
+.heading-center     { text-align: center; margin-bottom: 3rem; }
+.heading-center-sub { text-align: center; margin: 3.5rem 0 2rem; font-size: 1.5rem; }
+.heading-center-sm  { text-align: center; margin-bottom: 2rem; }
+
+/* Lead paragraph */
+.text-lead { font-size: 1.2rem; margin-bottom: 2rem; }
+
+/* Toggle caption blocks */
+.caption-warning {
+    background: rgba(239, 68, 68, 0.15);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+.caption-warning-highlight { color: #f87171; font-weight: 600; }
+.caption-success {
+    display: none;
+    background: linear-gradient(135deg, rgba(44, 192, 105, 0.1), rgba(59, 142, 208, 0.1));
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(44, 192, 105, 0.2);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Nav */
+.mobile-nav-download { margin: 1rem 20px; display: inline-block; text-align: center; }
+
+/* Pricing card extras */
+.pricing-note    { margin-top: 1.5rem; font-size: 0.9rem; }
+.pricing-version { margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted); }
+.pricing-install { margin-top: 0.75rem; }
+.bmc-pricing-link { display: inline-block; margin-top: 1rem; }
+.bmc-pricing-img  { height: 48px; width: 174px; border-radius: 8px; }
+
+/* Support / BMC section */
+.support-section  { padding: 4rem 0; text-align: center; }
+.support-heading  { margin-bottom: 1rem; }
+.support-tagline  { color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem; }
+.bmc-support-link { display: inline-block; }
+.bmc-support-img  { height: 60px; width: 217px; border-radius: 8px; }
+
+/* Link accent colors */
+.link-accent-green { color: var(--accent-green); }
+.link-accent-blue  { color: var(--accent-blue); }
+
+/* Contact modal */
+.contact-modal-subtitle  { color: var(--text-muted); margin-bottom: 2rem; }
+.attachment-label-note   { color: var(--text-muted); font-size: 0.9em; }
+.file-input-styled       { padding: 0.75rem; cursor: pointer; }
+.attachment-hint         { color: var(--text-muted); font-size: 0.85em; display: block; margin-top: 0.5rem; }
+
+/* Footer */
+.footer-note { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Inner-page hero (install, changelog, legal pages) */
+.hero-inner { padding: 6rem 0 3rem; }
+.hero-inner h1 { font-size: 2.5rem; }
+.hero-inner p  { max-width: 600px; margin: 0 auto; }
+
+/* Inner-page back-link / CTA */
+.page-cta-center  { text-align: center; margin-top: 3rem; }
+.back-link-wrap   { margin-top: 3rem; }
+
+/* Changelog release-notes section */
+.release-notes-section { padding-top: 2rem; }
+
+/* Contact modal — JS-controlled visibility; hidden by default via CSS so no inline style needed */
+#submitSpinner,
+.contact-message { display: none; }
