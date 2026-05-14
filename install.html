@@ -37,6 +37,7 @@
                 <a href="index.html#comparison">Compare</a>
                 <a href="index.html#pricing">Pricing</a>
                 <a href="index.html#faq">FAQ</a>
+                <a href="mailto:support@dateback.app">Support</a>
             </div>
 
             <div class="nav-right">
@@ -52,37 +53,42 @@
             <a href="index.html#comparison">Compare</a>
             <a href="index.html#pricing">Pricing</a>
             <a href="index.html#faq">FAQ</a>
-            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta"
-                style="margin: 1rem 20px; display: inline-block; text-align: center;" target="_blank"
-                rel="noopener noreferrer">Download for Mac</a>
+            <a href="mailto:support@dateback.app">Support</a>
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta mobile-nav-download"
+                target="_blank" rel="noopener noreferrer">Download for Mac</a>
         </div>
     </nav>
 
     <main id="main-content">
     <!-- PAGE HEADER -->
-    <section class="hero" style="padding: 6rem 0 3rem;">
+    <section class="hero hero-inner">
         <div class="container">
-            <h1 style="font-size: 2.5rem;">
-                Install <span class="gradient-text">Guide</span>
-            </h1>
-            <p style="max-width: 600px; margin: 0 auto;">
-                Follow these steps to install DateBack on your Mac. Takes about two minutes.
-            </p>
+            <h1>Install <span class="gradient-text">Guide</span></h1>
+            <p>Follow these steps to install DateBack on your Mac. Takes about two minutes.</p>
         </div>
     </section>
 
     <!-- INSTALL GUIDE -->
     <section id="install-guide" class="install-guide-section">
         <div class="container">
+            <div class="install-chip-callout">
+                <strong>First: identify your Mac's chip</strong>
+                <p>Click <strong>&#63743; &rarr; About This Mac</strong>. Under "Chip" or "Processor" you'll see either <strong>Apple M1 / M2 / M3 / M4</strong> (Apple Silicon) or <strong>Intel Core</strong> (Intel Mac). Download the matching DMG in Step 1.</p>
+            </div>
+
             <div class="install-steps">
 
                 <div class="install-step">
                     <div class="install-step-number">1</div>
                     <div class="install-step-content">
                         <h2>Download</h2>
-                        <p>Open the latest GitHub release and download the <strong>DateBack</strong> file ending in <strong>.dmg</strong>. The file is about 180 MB.</p>
+                        <p>Open the latest GitHub release and download the <strong>.dmg</strong> file that matches your Mac (see the chip callout above):</p>
+                        <ul>
+                            <li><strong>Apple Silicon (M1/M2/M3/M4):</strong> download the file ending in <code>-arm64.dmg</code></li>
+                            <li><strong>Intel Mac:</strong> download the file ending in <code>-x64.dmg</code></li>
+                        </ul>
                         <p><a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Download the latest Mac release &rarr;</a></p>
-                        <p class="install-note">Requires macOS 11 or later on an Apple Silicon Mac (M1, M2, M3, or M4).</p>
+                        <p class="install-note">Requires macOS 11 (Big Sur) or later.</p>
                     </div>
                 </div>
 
@@ -130,7 +136,7 @@
                 <p>Need help? Email <a href="mailto:support@dateback.app">support@dateback.app</a> &mdash; we respond within 48 hours.</p>
             </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
+            <div class="page-cta-center">
                 <a href="index.html" class="btn btn-secondary">&larr; Back to Home</a>
             </div>
         </div>
@@ -145,6 +151,7 @@
             <div class="footer-links">
                 <a href="index.html#features">Features</a>
                 <a href="index.html#export-guide">Export Guide</a>
+                <a href="install.html">Install Guide</a>
                 <a href="index.html#faq">FAQ</a>
                 <a href="changelog.html">Changelog</a>
                 <a href="mailto:support@dateback.app">Contact</a>
@@ -153,8 +160,8 @@
                 <a href="terms-of-service.html">Terms of Service</a>
             </div>
 
-            <p style="font-size: 0.85rem; color: var(--text-muted);">
-                Requires macOS 11+ and Apple Silicon (M1, M2, M3, or M4)
+            <p class="footer-note">
+                Requires macOS 11+ &middot; Apple Silicon (M1–M4) or Intel Mac
             </p>
 
             <p>&copy; 2026 Giovanni Lunetta. All rights reserved.</p>
