@@ -44,7 +44,7 @@
                 <a href="#comparison">Compare</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
-                <a href="#" onclick="openContactModal(); return false;">Support</a>
+                <a href="#" data-action="open-contact" data-subject="Support Request">Support</a>
             </div>
 
             <div class="nav-right">
@@ -60,9 +60,8 @@
             <a href="#comparison">Compare</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <a href="#" onclick="openContactModal(); return false;">Support</a>
-            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta"
-                style="margin: 1rem 20px; display: inline-block; text-align: center;" target="_blank"
+            <a href="#" data-action="open-contact" data-subject="Support Request">Support</a>
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta mobile-nav-download" target="_blank"
                 rel="noopener noreferrer">Download for Mac</a>
         </div>
     </nav>
@@ -86,24 +85,41 @@
             </p>
             <div class="hero-buttons">
                 <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download for Mac</a>
+                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Download — Apple Silicon
+                    <span class="btn-arch-label">M1 · M2 · M3 · M4</span>
+                </a>
+                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
+                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Download — Intel Mac
+                    <span class="btn-arch-label">Core i5 · i7 · i9</span>
+                </a>
                 <a href="#features" class="btn btn-secondary">See Features</a>
             </div>
             <p class="system-requirements">
-                <strong>System requirements:</strong> Apple Silicon Mac (M1, M2, M3, M4) &middot; macOS 11.0 (Big Sur) or later
+                <strong>System requirements:</strong> macOS 11.0 (Big Sur) or later &middot; Apple Silicon (M1–M4) or Intel Mac
             </p>
 
             <div class="hero-carousel">
                 <div class="carousel-wrapper">
                     <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">‹</button>
                     <div class="carousel-track">
-                        <img src="images/app_opening.png" alt="DateBack App - Welcome Screen"
-                            class="carousel-image active" width="1798" height="1978" loading="eager"
-                            fetchpriority="high" decoding="async">
-                        <img src="images/app_home.png" alt="DateBack App Interface - Ready to Process Your Memories"
-                            class="carousel-image" width="1798" height="1978" loading="lazy" decoding="async">
-                        <img src="images/app_processing_complete.png" alt="DateBack App - Processing Complete"
-                            class="carousel-image" width="1794" height="1970" loading="lazy" decoding="async">
+                        <picture>
+                            <source srcset="images/app_opening.webp" type="image/webp">
+                            <img src="images/app_opening.png" alt="DateBack App - Welcome Screen"
+                                class="carousel-image active" width="1798" height="1978" loading="eager"
+                                fetchpriority="high" decoding="async">
+                        </picture>
+                        <picture>
+                            <source srcset="images/app_home.webp" type="image/webp">
+                            <img src="images/app_home.png" alt="DateBack App Interface - Ready to Process Your Memories"
+                                class="carousel-image" width="1798" height="1978" loading="lazy" decoding="async">
+                        </picture>
+                        <picture>
+                            <source srcset="images/app_processing_complete.webp" type="image/webp">
+                            <img src="images/app_processing_complete.png" alt="DateBack App - Processing Complete"
+                                class="carousel-image" width="1794" height="1970" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                     <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">›</button>
                 </div>
@@ -119,9 +135,9 @@
     <!-- DATES SECTION: Real Photo Proof -->
     <section id="real-example">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="section-intro-wide">
                 <h2>Restore <span class="gradient-text">Date Taken</span>. Keep your timeline.</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Snapchat exports overwrite 'Date Taken' with the
+                <p class="text-lead">Snapchat exports overwrite 'Date Taken' with the
                     export date. DateBack restores the original.</p>
             </div>
 
@@ -201,13 +217,11 @@
 
             <!-- Dynamic caption that changes based on toggle state -->
             <div class="example-caption" id="toggle-caption">
-                <div class="caption-without"
-                    style="background: rgba(239, 68, 68, 0.15); color: white; padding: 0.875rem 1.5rem; border-radius: 8px; font-weight: 500; font-size: 1.05rem; max-width: 680px; margin: 0 auto;">
-                    ⚠️ Without DateBack, your <span style="color: #f87171; font-weight: 600;">entire photo
-                        timeline</span> collapses to <span style="color: #f87171; font-weight: 600;">one day</span>
+                <div class="caption-without caption-warning">
+                    ⚠️ Without DateBack, your <span class="caption-warning-highlight">entire photo
+                        timeline</span> collapses to <span class="caption-warning-highlight">one day</span>
                 </div>
-                <div class="caption-with"
-                    style="display: none; background: linear-gradient(135deg, rgba(44, 192, 105, 0.1), rgba(59, 142, 208, 0.1)); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid rgba(44, 192, 105, 0.2); max-width: 680px; margin: 0 auto;">
+                <div class="caption-with caption-success">
                     💡 DateBack reads <span class="caption-accent">hidden JSON</span> data and restores <span
                         class="caption-accent">original dates</span>.
                 </div>
@@ -218,7 +232,7 @@
     <!-- OVERLAY MERGE SECTION -->
     <section id="overlay-comparison">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+            <div class="section-intro-wide-spaced">
                 <h2>Merge <span class="gradient-text">overlays</span> automatically</h2>
                 <p>Snapchat exports overlay text and drawings as separate files. DateBack automatically merges them back
                     into one complete memory.</p>
@@ -266,7 +280,7 @@
     <!-- HOW DATEBACK WORKS (3 Steps) -->
     <section id="how-it-works">
         <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <div class="section-intro">
                 <h2>How <span class="gradient-text">DateBack</span> Works</h2>
                 <p>The gist — what DateBack does in about 60 seconds.</p>
             </div>
@@ -294,7 +308,7 @@
     <!-- PRIVACY & SECURITY (Merged) -->
     <section id="privacy">
         <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <div class="section-intro">
                 <h2>Privacy & <span class="gradient-text">Security</span></h2>
                 <p>Your memories are personal. DateBack keeps them that way—securely.</p>
             </div>
@@ -328,8 +342,8 @@
                 <div class="privacy-card">
                     <div class="icon">📧</div>
                     <h4>Email Support</h4>
-                    <p><a href="#" onclick="openContactModal(); return false;"
-                            style="color: var(--accent-green);">support@dateback.app</a></p>
+                    <p><a href="#" data-action="open-contact" data-subject="Support Request"
+                            class="link-accent-green">support@dateback.app</a></p>
                     <p class="support-commitment">We respond within 48 hours.</p>
                 </div>
             </div>
@@ -339,7 +353,7 @@
     <!-- FEATURES / WHY DATEBACK -->
     <section id="features">
         <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <div class="section-intro">
                 <h2>Why Use <span class="gradient-text">DateBack</span>?</h2>
                 <p>Standard export tools are broken. They strip your dates and crash on large files. DateBack was built
                     to solve the problems that others ignore.</p>
@@ -489,23 +503,33 @@
                             <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        macOS 11+ (Apple Silicon)
+                        macOS 11+ (Apple Silicon &amp; Intel)
                     </li>
                 </ul>
 
-                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 1rem;">
-                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="174" height="48" style="height: 48px; width: 174px; border-radius: 8px;">
+                <div class="download-btn-group">
+                    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Apple Silicon
+                        <span class="btn-arch-label">M1 · M2 · M3 · M4</span>
+                    </a>
+                    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Intel Mac
+                        <span class="btn-arch-label">Core i5 · i7 · i9</span>
+                    </a>
+                </div>
+                <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" class="bmc-pricing-link">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="174" height="48" class="bmc-pricing-img">
                 </a>
 
-                <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                <p class="pricing-note">
                     Download the latest notarized Mac release from GitHub.
                 </p>
-                <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
-                    Current version: <a href="changelog.html" style="color: var(--accent-blue);">v1.4.2</a>
+                <p class="pricing-version">
+                    Current version: <a href="changelog.html" class="link-accent-blue">v1.4.2</a>
                 </p>
-                <p style="margin-top: 0.75rem;">
+                <p class="pricing-install">
                     <a href="/install.html" class="install-guide-link">Installation guide &rarr;</a>
                 </p>
             </div>
@@ -516,7 +540,7 @@
     <!-- FAQ -->
     <section id="faq">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked <span
+            <h2 class="heading-center">Frequently Asked <span
                     class="gradient-text">Questions</span></h2>
 
             <div class="faq-grid">
@@ -528,8 +552,7 @@
 
                 <details class="faq-item">
                     <summary>Does this work on Windows or Intel Macs?</summary>
-                    <p><strong>Apple Silicon Macs only</strong> (M1, M2, M3, M4). Intel Macs and Windows are not
-                        currently supported. Future versions may expand compatibility.</p>
+                    <p><strong>Intel Macs are now supported.</strong> Download the file ending in <code>-x64.dmg</code> from the releases page. Apple Silicon (M1–M4) users should download the file ending in <code>-arm64.dmg</code>. Windows is not currently supported.</p>
                 </details>
 
                 <details class="faq-item">
@@ -604,13 +627,15 @@
                 </details>
             </div>
 
-            <h2 style="text-align: center; margin: 3.5rem 0 2rem; font-size: 1.5rem;">Troubleshooting</h2>
+            <h2 class="heading-center-sub">Troubleshooting</h2>
             <div class="faq-grid">
                 <details class="faq-item">
                     <summary>The download page is confusing. Which file do I need?</summary>
-                    <p>Open the latest GitHub release and download the <strong>DateBack</strong> file ending in
-                        <strong>.dmg</strong>. Intel/Windows builds are not currently supported.
-                    </p>
+                    <p>Open the latest GitHub release and look for two <strong>.dmg</strong> files. Download
+                        <strong>DateBack-...-arm64.dmg</strong> if you have an Apple Silicon Mac (M1, M2, M3, M4),
+                        or <strong>DateBack-...-x64.dmg</strong> if you have an Intel Mac. Not sure which?
+                        Click <strong>&#63743; &rarr; About This Mac</strong> &mdash; look for "Apple M" (Silicon) or
+                        "Intel Core" (Intel).</p>
                 </details>
 
                 <details class="faq-item">
@@ -668,7 +693,7 @@
     <!-- EXPORT GUIDE (Collapsed Accordion) -->
     <section id="export-guide">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Need Help <span class="gradient-text">Exporting</span>
+            <h2 class="heading-center-sm">Need Help <span class="gradient-text">Exporting</span>
                 Your Data?</h2>
 
             <details class="export-guide-accordion">
@@ -827,7 +852,7 @@
     <!-- Contact Modal -->
     <div id="contactModal" class="contact-modal">
         <div class="contact-modal-content">
-            <span class="contact-modal-close" onclick="closeContactModal()">
+            <span class="contact-modal-close" data-action="close-contact">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -835,7 +860,7 @@
                 </svg>
             </span>
             <h2>Get in <span class="gradient-text">Touch</span></h2>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Have a question or need support? We're here to
+            <p class="contact-modal-subtitle">Have a question or need support? We're here to
                 help!</p>
 
             <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true"
@@ -864,24 +889,24 @@
 
                 <div class="form-group">
                     <label for="contact-attachments">Attachments <span
-                            style="color: var(--text-muted); font-size: 0.9em;">(optional, max 8MB per
+                            class="attachment-label-note">(optional, max 8MB per
                             file)</span></label>
                     <input type="file" id="contact-attachments" name="attachment" accept="image/*"
-                        style="padding: 0.75rem; cursor: pointer;">
-                    <small style="color: var(--text-muted); font-size: 0.85em; display: block; margin-top: 0.5rem;">You
+                        class="file-input-styled">
+                    <small class="attachment-hint">You
                         can attach screenshots or images to help us better understand your issue</small>
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="contactSubmit">
                     <span id="submitText">Send Message</span>
-                    <span id="submitSpinner" style="display: none;">Sending...</span>
+                    <span id="submitSpinner">Sending...</span>
                 </button>
             </form>
 
-            <div id="contactSuccess" class="contact-message contact-success" style="display: none;">
+            <div id="contactSuccess" class="contact-message contact-success">
                 ✓ Message sent successfully! We'll get back to you soon.
             </div>
-            <div id="contactError" class="contact-message contact-error" style="display: none;">
+            <div id="contactError" class="contact-message contact-error">
                 ✗ Oops! Something went wrong. Please email us directly at support@dateback.app
             </div>
         </div>
@@ -897,12 +922,12 @@
     </section>
 
     <!-- Buy Me a Coffee -->
-    <section id="support" style="padding: 4rem 0; text-align: center;">
+    <section id="support" class="support-section">
         <div class="container">
-            <h2 style="margin-bottom: 1rem;">DateBack is <span class="gradient-text">free, forever.</span></h2>
-            <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 2rem;">DateBack stays free. Optional coffees help cover signing, hosting, and maintenance.</p>
-            <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" style="height: 60px; width: 217px; border-radius: 8px;">
+            <h2 class="support-heading">DateBack is <span class="gradient-text">free, forever.</span></h2>
+            <p class="support-tagline">DateBack stays free. Optional coffees help cover signing, hosting, and maintenance.</p>
+            <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" class="bmc-support-link">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" class="bmc-support-img">
             </a>
         </div>
     </section>
@@ -919,14 +944,14 @@
                 <a href="install.html">Install Guide</a>
                 <a href="#faq">FAQ</a>
                 <a href="changelog.html">Changelog</a>
-                <a href="#" onclick="openContactModal(); return false;">Contact</a>
+                <a href="#" data-action="open-contact">Contact</a>
                 <a href="licenses.html">Open Source / Licenses</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-of-service.html">Terms of Service</a>
             </div>
 
-            <p style="font-size: 0.85rem; color: var(--text-muted);">
-                Requires macOS 11+ and Apple Silicon (M1, M2, M3, or M4)
+            <p class="footer-note">
+                Requires macOS 11+ &middot; Apple Silicon (M1–M4) or Intel Mac
             </p>
 
             <p>&copy; 2026 Giovanni Lunetta. All rights reserved.</p>
