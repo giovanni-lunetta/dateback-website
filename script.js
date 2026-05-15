@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 8. Contact Modal
 // ========================================
 
-function openContactModal() {
+function openContactModal(subject) {
     const modal = document.getElementById('contactModal');
     if (modal) {
         modal.classList.add('show');
@@ -297,6 +297,11 @@ function openContactModal() {
         document.getElementById('contactForm').reset();
         document.getElementById('contactSuccess').style.display = 'none';
         document.getElementById('contactError').style.display = 'none';
+        // Pre-fill subject if provided
+        if (subject) {
+            const subjectField = document.getElementById('contact-subject');
+            if (subjectField) subjectField.value = subject;
+        }
     }
 }
 
@@ -384,6 +389,21 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('click', (e) => {
     const modal = document.getElementById('contactModal');
     if (modal && e.target === modal) {
+        closeContactModal();
+    }
+});
+
+// Delegated handlers for data-action triggers
+document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-action="open-contact"]');
+    if (trigger) {
+        e.preventDefault();
+        openContactModal(trigger.dataset.subject || '');
+        return;
+    }
+    const closer = e.target.closest('[data-action="close-contact"]');
+    if (closer) {
+        e.preventDefault();
         closeContactModal();
     }
 });

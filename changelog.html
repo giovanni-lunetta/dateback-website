@@ -1,437 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="slate">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changelog | DateBack</title>
-    <meta name="description" content="DateBack release notes and version history. See what's new in each update.">
-    <meta property="og:title" content="Changelog | DateBack">
-    <meta property="og:description" content="DateBack release notes and version history. See what's new in each update.">
-    <meta property="og:url" content="https://dateback.app/changelog.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Changelog | DateBack">
-    <meta name="twitter:description" content="DateBack release notes and version history. See what's new in each update.">
-    <meta name="twitter:image" content="https://dateback.app/images/og-image.jpg">
-    <link rel="canonical" href="https://dateback.app/changelog.html">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog | DateBack</title>
+  <meta name="description" content="DateBack release notes and version history. See what's new in each update.">
+  <link rel="canonical" href="https://dateback.app/changelog.html">
+  <meta property="og:title" content="Changelog | DateBack">
+  <meta property="og:description" content="DateBack release notes and version history.">
+  <meta property="og:url" content="https://dateback.app/changelog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dateback.css">
 </head>
-
 <body>
 
-    <nav>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="DateBack logo" class="logo-img">
-                DateBack<span>.app</span>
-            </a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-            <div class="nav-center">
-                <a href="index.html#real-example">Results</a>
-                <a href="index.html#how-it-works">How it works</a>
-                <a href="index.html#comparison">Compare</a>
-                <a href="index.html#pricing">Pricing</a>
-                <a href="index.html#faq">FAQ</a>
-            </div>
+<nav id="nav">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="DateBack logo" width="28" height="28">
+      <span class="nav-logo-name">DateBack</span><span class="nav-logo-dot">.app</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#proof">Results</a>
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#comparison">Compare</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="mailto:support@dateback.app">Support</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn-nav-cta" target="_blank" rel="noopener noreferrer">Download</a>
+      <button type="button" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu">
+    <a href="index.html#proof">Results</a>
+    <a href="index.html#how-it-works">How it works</a>
+    <a href="index.html#comparison">Compare</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="mobile-download-btn" target="_blank" rel="noopener noreferrer">Download</a>
+  </div>
+</nav>
 
-            <div class="nav-right">
-                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-            </div>
-        </div>
+<main id="main-content">
 
-        <div class="mobile-menu">
-            <a href="index.html#real-example">Results</a>
-            <a href="index.html#how-it-works">How it works</a>
-            <a href="index.html#comparison">Compare</a>
-            <a href="index.html#pricing">Pricing</a>
-            <a href="index.html#faq">FAQ</a>
-            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta"
-                style="margin: 1rem 20px; display: inline-block; text-align: center;" target="_blank"
-                rel="noopener noreferrer">Download for Mac</a>
-        </div>
-    </nav>
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-eyebrow">Release Notes</span>
+      <h1>Changelog</h1>
+      <p>What&rsquo;s new in DateBack. Every version, every fix, in order.</p>
+    </div>
+  </section>
 
-    <main id="main-content">
-    <!-- CHANGELOG HEADER -->
-    <section class="hero" style="padding: 6rem 0 3rem;">
-        <div class="container">
-            <h1 style="font-size: 2.5rem;">
-                Release <span class="gradient-text">Notes</span>
-            </h1>
-            <p style="max-width: 600px; margin: 0 auto;">
-                What's new in DateBack. Stay updated with the latest features, improvements, and bug fixes.
-            </p>
-        </div>
-    </section>
+  <div class="container">
+    <div class="changelog-wrap">
 
-    <!-- RELEASE NOTES -->
-    <section id="release-notes" style="padding-top: 2rem;">
-        <div class="container">
-            <div class="changelog-container">
-                <!-- v1.4.4 - Latest (Expanded by default) -->
-                <details class="changelog-entry" open>
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.4.4</span>
-                        <span class="version-date">May 13, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Processing — Multi-part Snapchat exports (e.g. companion ZIPs like <code>mydata~XXXX-2.zip</code>) are now correctly found and processed in production builds</li>
-                        <li>UI — The ZIP file clear button is now disabled while processing is running to prevent accidental deselection mid-run</li>
-                    </ul>
-                </details>
+      <!-- v1.5.0 Latest -->
+      <details class="version-entry latest" open>
+        <summary>
+          <span class="version-num">v1.5.0</span>
+          <span class="version-date">May 14, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Platform &mdash; Windows 10 / 11 (x64) is now supported; download <code>DateBack-1.5.0-x64-win.exe</code> from the releases page</li>
+          <li>Platform &mdash; Intel Mac (x86_64) is now supported with a dedicated x64 DMG</li>
+          <li>Windows &mdash; Prevents sleep during processing using the Windows <code>SetThreadExecutionState</code> API (equivalent to macOS caffeinate)</li>
+          <li>Security &mdash; Upgraded bundled Python runtime: Pillow 12.0.0 &rarr; 12.2.0 and requests 2.32.5 &rarr; 2.33.0 (7 CVE fixes)</li>
+        </ul>
+      </details>
 
-                <!-- v1.4.3 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.4.3</span>
-                        <span class="version-date">May 12, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Processing — Success modal now displays correctly when some memories are unavailable in the export</li>
-                        <li>Errors — ZIP-not-found errors now show a targeted message asking users to re-select their Snapchat export, rather than incorrectly referencing the output folder</li>
-                        <li>UI — "Buy Me a Coffee" button in the success modal no longer overlaps the Next Steps button</li>
-                    </ul>
-                </details>
+      <!-- v1.4.4 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.4.4</span>
+          <span class="version-date">May 13, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Processing &mdash; Multi-part Snapchat exports (e.g. companion ZIPs like <code>mydata~XXXX-2.zip</code>) are now correctly found and processed in production builds</li>
+          <li>UI &mdash; The ZIP file clear button is now disabled while processing is running to prevent accidental deselection mid-run</li>
+        </ul>
+      </details>
 
-                <!-- v1.4.2 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.4.2</span>
-                        <span class="version-date">May 12, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Mac permissions — Added folder usage descriptions so automatic ZIP discovery works consistently in production builds</li>
-                        <li>QA — Matched sandbox build permission metadata to the production build</li>
-                        <li>Website — Corrected the public open source dependency table for the current app bundle</li>
-                        <li>Security — Narrowed website image CSP, hardened app ZIP/disk path validation, and compacted large resume manifests</li>
-                        <li>Release — Updated Electron and dotenv dev tooling and pinned bundled binaries to explicit macOS arm64 paths</li>
-                    </ul>
-                </details>
+      <!-- v1.4.3 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.4.3</span>
+          <span class="version-date">May 12, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Processing &mdash; Success modal now displays correctly when some memories are unavailable in the export</li>
+          <li>Errors &mdash; ZIP-not-found errors now show a targeted message asking users to re-select their Snapchat export, rather than incorrectly referencing the output folder</li>
+          <li>UI &mdash; &ldquo;Buy Me a Coffee&rdquo; button in the success modal no longer overlaps the Next Steps button</li>
+        </ul>
+      </details>
 
-                <!-- v1.4.1 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.4.1</span>
-                        <span class="version-date">May 9, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Release — Corrected bundled third-party notices and GPL written-offer language</li>
-                        <li>Reliability — Improved Snapchat HEAD retry handling for throttled responses</li>
-                        <li>Website — Updated social preview metadata, sitemap priorities, and release validation tests</li>
-                    </ul>
-                </details>
+      <!-- v1.4.2 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.4.2</span>
+          <span class="version-date">May 12, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Mac permissions &mdash; Added folder usage descriptions so automatic ZIP discovery works consistently in production builds</li>
+          <li>QA &mdash; Matched sandbox build permission metadata to the production build</li>
+          <li>Website &mdash; Corrected the public open source dependency table for the current app bundle</li>
+          <li>Security &mdash; Narrowed website image CSP, hardened app ZIP/disk path validation, and compacted large resume manifests</li>
+          <li>Release &mdash; Updated Electron and dotenv dev tooling and pinned bundled binaries to explicit macOS arm64 paths</li>
+        </ul>
+      </details>
 
-                <!-- v1.4.0 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.4.0</span>
-                        <span class="version-date">May 6, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Processing — Added multi-ZIP handling so large Snapchat exports split across multiple archives can be processed together</li>
-                        <li>UI — Fixed overlay behavior so dialogs and progress states stay readable and dismiss correctly</li>
-                        <li>Website — Updated public copy for the free download model, optional Buy Me A Coffee support, and support resources</li>
-                    </ul>
-                </details>
+      <!-- v1.4.1 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.4.1</span>
+          <span class="version-date">May 9, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Release &mdash; Corrected bundled third-party notices and GPL written-offer language</li>
+          <li>Reliability &mdash; Improved Snapchat HEAD retry handling for throttled responses</li>
+          <li>Website &mdash; Updated social preview metadata, sitemap priorities, and release validation tests</li>
+        </ul>
+      </details>
 
-                <!-- v1.3.1 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.3.1</span>
-                        <span class="version-date">May 5, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Fix — Snapchat ZIP exports with blank download URL fields now extract local media files from the archive instead of silently skipping them</li>
-                        <li>Fix — Root-level <code>json/memories_history.json</code> exports are supported</li>
-                        <li>Reporting — Rows with neither a local ZIP media file nor a download URL are reported as missing instead of skipped</li>
-                    </ul>
-                </details>
+      <!-- v1.4.0 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.4.0</span>
+          <span class="version-date">May 6, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Processing &mdash; Added multi-ZIP handling so large Snapchat exports split across multiple archives can be processed together</li>
+          <li>UI &mdash; Fixed overlay behavior so dialogs and progress states stay readable and dismiss correctly</li>
+          <li>Website &mdash; Updated public copy for the free download model, optional Buy Me A Coffee support, and support resources</li>
+        </ul>
+      </details>
 
-                <!-- v1.3.0 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.3.0</span>
-                        <span class="version-date">May 5, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Distribution — DateBack is now a free Mac download with no purchase or activation key required</li>
-                        <li>App — Removed the license activation flow and local license storage</li>
-                        <li>Website — Download links now point to GitHub Releases, with optional Buy Me A Coffee support</li>
-                        <li>Legal — Updated terms and privacy policy for the free download and optional donations model</li>
-                    </ul>
-                </details>
+      <!-- v1.3.1 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.3.1</span>
+          <span class="version-date">May 5, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Fix &mdash; Snapchat ZIP exports with blank download URL fields now extract local media files from the archive instead of silently skipping them</li>
+          <li>Fix &mdash; Root-level <code>json/memories_history.json</code> exports are supported</li>
+          <li>Reporting &mdash; Rows with neither a local ZIP media file nor a download URL are reported as missing instead of skipped</li>
+        </ul>
+      </details>
 
-                <!-- v1.2.1 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.2.1</span>
-                        <span class="version-date">April 18, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Backend — Disk-full error handling: DateBack now detects when the drive runs out of space and surfaces a clear message instead of silently failing; distinguishes staging, destination, and download scenarios</li>
-                        <li>UI — Next Steps modal is now mode-aware: Cloud mode users see a "Cloud Delivery Finished" section with cloud-folder guidance; Computer mode users see the existing local-storage sections</li>
-                        <li>UI — Advanced Cloud Settings panel redesigned with "Optional" badge, inline help buttons per setting, and cleaner layout</li>
-                    </ul>
-                </details>
+      <!-- v1.3.0 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.3.0</span>
+          <span class="version-date">May 5, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Distribution &mdash; DateBack is now a free Mac download with no purchase or activation key required</li>
+          <li>App &mdash; Removed the license activation flow and local license storage</li>
+          <li>Website &mdash; Download links now point to GitHub Releases, with optional Buy Me A Coffee support</li>
+          <li>Legal &mdash; Updated terms and privacy policy for the free download and optional donations model</li>
+        </ul>
+      </details>
 
-                <!-- v1.2.0 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.2.0</span>
-                        <span class="version-date">March 19, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Backend — Organizer worker state tracking: prevents orphaned processes on quit or restart</li>
-                        <li>Backend — Cloud resume continuity: batch numbering now correctly continues from existing delivered Batch folders instead of restarting at Batch_01</li>
-                        <li>Backend — IPC hardening: additional security checks and process lifecycle guards</li>
-                        <li>UI — Cloud mode copy updated to accurately describe Batch folder delivery into the synced destination</li>
-                    </ul>
-                </details>
+      <!-- v1.2.1 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.2.1</span>
+          <span class="version-date">April 18, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Backend &mdash; Disk-full error handling: DateBack now detects when the drive runs out of space and surfaces a clear message instead of silently failing; distinguishes staging, destination, and download scenarios</li>
+          <li>UI &mdash; Next Steps modal is now mode-aware: Cloud mode users see a &ldquo;Cloud Delivery Finished&rdquo; section with cloud-folder guidance; Computer mode users see the existing local-storage sections</li>
+          <li>UI &mdash; Advanced Cloud Settings panel redesigned with &ldquo;Optional&rdquo; badge, inline help buttons per setting, and cleaner layout</li>
+        </ul>
+      </details>
 
-                <!-- v1.1.4 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.1.4</span>
-                        <span class="version-date">March 12, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>UI — Improved layout, visual hierarchy, and overall flow of the main interface</li>
-                    </ul>
-                </details>
+      <!-- v1.2.0 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.2.0</span>
+          <span class="version-date">March 19, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Backend &mdash; Organizer worker state tracking: prevents orphaned processes on quit or restart</li>
+          <li>Backend &mdash; Cloud resume continuity: batch numbering now correctly continues from existing delivered Batch folders instead of restarting at Batch_01</li>
+          <li>Backend &mdash; IPC hardening: additional security checks and process lifecycle guards</li>
+          <li>UI &mdash; Cloud mode copy updated to accurately describe Batch folder delivery into the synced destination</li>
+        </ul>
+      </details>
 
-                <!-- v1.1.3 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.1.3</span>
-                        <span class="version-date">March 11, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Build reliability — explicit binary packaging ensures memory-organizer and ffmpeg are always included in the app bundle</li>
-                        <li>Internal — improved QA build configuration for release testing</li>
-                    </ul>
-                </details>
+      <!-- v1.1.4 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.1.4</span>
+          <span class="version-date">March 12, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>UI &mdash; Improved layout, visual hierarchy, and overall flow of the main interface</li>
+        </ul>
+      </details>
 
-                <!-- v1.1.2 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.1.2</span>
-                        <span class="version-date">February 21, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Security — QA release mode now requires explicit double-flag opt-in; production configuration is always the default</li>
-                    </ul>
-                </details>
+      <!-- v1.1.3 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.1.3</span>
+          <span class="version-date">March 11, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Build reliability &mdash; Explicit binary packaging ensures memory-organizer and ffmpeg are always included in the app bundle</li>
+          <li>Internal &mdash; Improved QA build configuration for release testing</li>
+        </ul>
+      </details>
 
-                <!-- v1.1.1 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.1.1</span>
-                        <span class="version-date">February 20, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Fix — Critical: fixed startup crash in packaged builds when .env file is absent</li>
-                        <li>Branding — Removed last remaining MemSavr references from Python CLI</li>
-                    </ul>
-                </details>
+      <!-- v1.1.2 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.1.2</span>
+          <span class="version-date">February 21, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Security &mdash; QA release mode now requires explicit double-flag opt-in; production configuration is always the default</li>
+        </ul>
+      </details>
 
-                <!-- v1.1.0 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.1.0</span>
-                        <span class="version-date">February 18, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Feature — Cloud Mode: automatic staging, upload, and delivery pipeline</li>
-                        <li>Feature — Cache threshold management pauses/resumes processing to protect disk space</li>
-                        <li>Feature — Configurable upload mode (copy or move) and retry logic</li>
-                        <li>Security — Renderer document trust verification rejects untrusted IPC origins</li>
-                        <li>Security — IPC sender origin validation across all handlers</li>
-                        <li>Fix — open-folder now correctly approves the validated output directory after processing starts</li>
-                        <li>Processing — Expanded Snapchat memory handling with improved error coverage</li>
-                        <li>UI — Cloud-specific success modal with delivery stats and storage warnings</li>
-                        <li>UI — Mode indicator (Computer / Cloud) drives layout and controls</li>
-                        <li>Tests — 65-test characterization suite covering IPC, renderer, storage, and processing UI</li>
-                    </ul>
-                </details>
+      <!-- v1.1.1 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.1.1</span>
+          <span class="version-date">February 20, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Fix &mdash; Critical: fixed startup crash in packaged builds when .env file is absent</li>
+          <li>Branding &mdash; Removed last remaining MemSavr references from Python CLI</li>
+        </ul>
+      </details>
 
-                <!-- v1.0.9 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.9</span>
-                        <span class="version-date">February 13, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Branding — Complete rebrand from MemSavr to DateBack</li>
-                        <li>Branding — New domain: dateback.app (savemymemories.app redirects)</li>
-                        <li>Branding — New logo and app icon with shield+clock design</li>
-                        <li>Branding — Refined "Stormy Morning" color palette</li>
-                        <li>Legal — Updated Terms of Service for GPL compliance</li>
-                        <li>Legal — Updated Privacy Policy with accurate data handling</li>
-                        <li>Legal — FFmpeg source package now available at dateback.app/licenses/ffmpeg-source.zip</li>
-                        <li>Contact — New support email: support@dateback.app</li>
-                        <li>Migration — Existing app settings and connections preserved automatically</li>
-                        <li>Migration — Settings and Google Photos connections preserved automatically</li>
-                    </ul>
-                </details>
+      <!-- v1.1.0 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.1.0</span>
+          <span class="version-date">February 18, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Feature &mdash; Cloud Mode: automatic staging, upload, and delivery pipeline</li>
+          <li>Feature &mdash; Cache threshold management pauses/resumes processing to protect disk space</li>
+          <li>Feature &mdash; Configurable upload mode (copy or move) and retry logic</li>
+          <li>Security &mdash; Renderer document trust verification rejects untrusted IPC origins</li>
+          <li>Security &mdash; IPC sender origin validation across all handlers</li>
+          <li>Fix &mdash; open-folder now correctly approves the validated output directory after processing starts</li>
+          <li>Processing &mdash; Expanded Snapchat memory handling with improved error coverage</li>
+          <li>UI &mdash; Cloud-specific success modal with delivery stats and storage warnings</li>
+          <li>UI &mdash; Mode indicator (Computer / Cloud) drives layout and controls</li>
+          <li>Tests &mdash; 65-test characterization suite covering IPC, renderer, storage, and processing UI</li>
+        </ul>
+      </details>
 
-                <!-- v1.0.8 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.8</span>
-                        <span class="version-date">January 14, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Security — Fixed 17 vulnerabilities (3 CRITICAL, 8 HIGH severity) - 85% risk reduction</li>
-                        <li>Security — ZIP bomb protection with size limits (100k files, 50GB max)</li>
-                        <li>Security — Path traversal (Zip Slip) protection against malicious archives</li>
-                        <li>Security — Command injection prevention in process cleanup</li>
-                        <li>Security — TOCTOU race condition fix in directory validation</li>
-                        <li>Security — ZIP path validation before subprocess execution</li>
-                        <li>Security — Recursive symlink protection in directory deletion</li>
-                        <li>Security — Rate limiting added to sensitive validation flows</li>
-                        <li>Security — Auto-updater downgrade attack protection</li>
-                        <li>Website — Added security headers (CSP, X-Frame-Options, XSS protection)</li>
-                        <li>Website — Fixed mobile image overlap in comparison section</li>
-                        <li>Website — Fixed date pills spanning full image width on mobile</li>
-                        <li>Website — Fixed image centering on mobile devices</li>
-                        <li>Website — Fixed contact form layout on mobile</li>
-                        <li>Website — Fixed contact form submission (Page Not Found error)</li>
-                        <li>Documentation — Added Python requirements.txt for dependency tracking</li>
-                    </ul>
-                </details>
+      <!-- v1.0.9 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.0.9</span>
+          <span class="version-date">February 13, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Branding &mdash; Complete rebrand from MemSavr to DateBack</li>
+          <li>Branding &mdash; New domain: dateback.app (savemymemories.app redirects)</li>
+          <li>Branding &mdash; New logo and app icon with shield+clock design</li>
+          <li>Legal &mdash; Updated Terms of Service for GPL compliance</li>
+          <li>Legal &mdash; Updated Privacy Policy with accurate data handling</li>
+          <li>Legal &mdash; FFmpeg source package now available at dateback.app/licenses/ffmpeg-source.zip</li>
+          <li>Contact &mdash; New support email: support@dateback.app</li>
+        </ul>
+      </details>
 
-                <!-- v1.0.7 -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.7</span>
-                        <span class="version-date">January 9, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Distribution — Updated the app download and release flow</li>
-                        <li>Security — SSRF protection with URL validation and redirect blocking</li>
-                        <li>Security — ZIP symlink blocking to prevent local file disclosure</li>
-                        <li>Website — Added sticky mobile CTA bar for better mobile conversion</li>
-                        <li>Website — Enhanced hero copy with outcome-focused messaging</li>
-                        <li>Website — Added clearer support messaging and trust badges</li>
-                        <li>Performance — Image optimization with lazy loading and explicit dimensions</li>
-                        <li>Accessibility — Added keyboard navigation skip link (WCAG compliance)</li>
-                        <li>Bug Fix — Cloud Mode resume UI now shows "Resuming..." status</li>
-                    </ul>
-                </details>
+      <!-- v1.0.8 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.0.8</span>
+          <span class="version-date">January 14, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Security &mdash; Fixed 17 vulnerabilities (3 CRITICAL, 8 HIGH severity) &mdash; 85% risk reduction</li>
+          <li>Security &mdash; ZIP bomb protection with size limits (100k files, 50GB max)</li>
+          <li>Security &mdash; Path traversal (Zip Slip) protection against malicious archives</li>
+          <li>Security &mdash; Command injection prevention in process cleanup</li>
+          <li>Security &mdash; TOCTOU race condition fix in directory validation</li>
+          <li>Security &mdash; Recursive symlink protection in directory deletion</li>
+          <li>Security &mdash; Auto-updater downgrade attack protection</li>
+        </ul>
+      </details>
 
-                <!-- v1.0.6 - Collapsed -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.6</span>
-                        <span class="version-date">January 8, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Security — Download URL validation, content-length checks, IPC sender validation</li>
-                        <li>iCloud Support — Resume processing even after files are offloaded</li>
-                        <li>Resume Options — Choose Trust, Verify, or Start Fresh modes</li>
-                        <li>Completion Summary — Enhanced modal with timestamp collision detection</li>
-                        <li>UI Redesign — Modern card-based resume modal with clear visual hierarchy</li>
-                        <li>External Drive Safety — Prevents silent failures on USB drive roots</li>
-                        <li>Bug Fixes — 0-byte placeholder fix, graceful pause, accurate manifest counts</li>
-                    </ul>
-                </details>
+      <!-- v1.0.0–v1.0.7 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.0.0 &ndash; v1.0.7</span>
+          <span class="version-date">December 2025 &ndash; January 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li><strong>v1.0.7</strong> (Jan 9, 2026) &mdash; SSRF protection, ZIP symlink blocking, sticky mobile CTA, performance improvements</li>
+          <li><strong>v1.0.6</strong> (Jan 8, 2026) &mdash; iCloud support, resume modes (Trust / Verify / Start Fresh), completion summary modal redesign</li>
+          <li><strong>v1.0.5</strong> (Jan 3, 2026) &mdash; 20&times; faster verification, true offline ZIP processing, 30&ndash;50% faster downloads</li>
+          <li><strong>v1.0.4</strong> (Jan 2, 2026) &mdash; GPL compliance fixes, resume feature fix, FFmpeg source availability</li>
+          <li><strong>v1.0.3</strong> (Dec 31, 2025) &mdash; Security updates, Electron v39.2.7 upgrade, Auto-Find ZIP feature</li>
+          <li><strong>v1.0.2</strong> (Dec 30, 2025) &mdash; Security hardening, 5 critical vulnerability fixes, 100MB installer size reduction</li>
+          <li><strong>v1.0.1</strong> (Dec 30, 2025) &mdash; UI refinements, Fast Pass optimization, improved ETA accuracy</li>
+          <li><strong>v1.0.0</strong> (Dec 30, 2025) &mdash; Initial public release, fully notarized for macOS Apple Silicon</li>
+        </ul>
+      </details>
 
-                <!-- v1.0.5 - Collapsed -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.5</span>
-                        <span class="version-date">January 3, 2026</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Performance — 20x faster verification, true offline ZIP processing</li>
-                        <li>Security — Critical data loss prevention with output directory safety guard</li>
-                        <li>Performance — 30-50% faster downloads via HTTP session pooling</li>
-                        <li>Reliability — Prevents silent file overwrites during batch organization</li>
-                        <li>Quality — 15 total improvements (code quality, security, performance, reliability)</li>
-                    </ul>
-                </details>
+      <!-- Coming Soon -->
+      <details class="version-entry coming">
+        <summary>
+          <span class="version-num upcoming">Coming Soon</span>
+          <span class="version-date"></span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Instagram &amp; Facebook memory exports</li>
+          <li>Direct Google Photos integration</li>
+        </ul>
+      </details>
 
-                <!-- Earlier Versions (v1.0.0 - v1.0.4) -->
-                <details class="changelog-entry">
-                    <summary class="changelog-version">
-                        <span class="version-badge">v1.0.0 - v1.0.4</span>
-                        <span class="version-date">Earlier Releases</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li><strong>v1.0.4</strong> (Jan 2, 2026) — GPL Compliance fixes, resume feature fix, FFmpeg
-                            source availability</li>
-                        <li><strong>v1.0.3</strong> (Dec 31, 2025) — Security updates, Electron v39.2.7 upgrade,
-                            Auto-Find ZIP feature</li>
-                        <li><strong>v1.0.2</strong> (Dec 30, 2025) — Security hardening, 5 critical vulnerability fixes,
-                            100MB installer size reduction</li>
-                        <li><strong>v1.0.1</strong> (Dec 30, 2025) — UI refinements, Fast Pass optimization, improved
-                            ETA accuracy</li>
-                        <li><strong>v1.0.0</strong> (Dec 30, 2025) — Initial public release, fully notarized for macOS
-                            Apple Silicon</li>
-                    </ul>
-                </details>
+      <div class="changelog-back-link">
+        <a href="index.html" class="btn-ghost">&larr; Back to DateBack.app</a>
+      </div>
 
-                <!-- Coming Soon - Expanded by default -->
-                <details class="changelog-entry coming-soon" open>
-                    <summary class="changelog-version">
-                        <span class="version-badge upcoming">Coming Soon</span>
-                    </summary>
-                    <ul class="changelog-list">
-                        <li>Intel Mac support (x86_64)</li>
-                        <li>Windows compatibility</li>
-                        <li>Instagram & Facebook memory exports</li>
-                        <li>Direct Google Photos integration</li>
-                    </ul>
-                </details>
-            </div>
+    </div>
+  </div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="index.html" class="btn btn-secondary">← Back to Home</a>
-            </div>
-        </div>
-    </section>
+</main>
 
-    </main>
+<footer>
+  <div class="footer-inner container">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <img src="images/logo.png" alt="DateBack" width="22" height="22">
+        DateBack<span>.app</span>
+      </a>
+      <p>Archive memories the right way.</p>
+    </div>
+    <div class="footer-links">
+      <a href="changelog.html">Changelog</a>
+      <a href="install.html">Install Guide</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+      <a href="licenses.html">Licenses</a>
+      <a href="mailto:support@dateback.app">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Giovanni Lunetta. Not affiliated with Snap Inc.</p>
+  </div>
+</footer>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo">DateBack<span>.app</span></div>
-
-            <div class="footer-links">
-                <a href="index.html#features">Features</a>
-                <a href="index.html#export-guide">Export Guide</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="changelog.html">Changelog</a>
-                <a href="mailto:support@dateback.app">Contact</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="licenses.html">Open Source / Licenses</a>
-            </div>
-
-            <p style="font-size: 0.85rem; color: var(--text-muted);">
-                Requires macOS 11+ and Apple Silicon (M1, M2, M3, or M4)
-            </p>
-
-            <p>&copy; 2026 Giovanni Lunetta. All rights reserved.</p>
-
-            <p class="disclaimer">
-                DateBack is a third-party utility and is not affiliated with, endorsed by, or sponsored by any social
-                media platform.
-                All trademarks are property of their respective owners. Use of platform names is for descriptive
-                purposes only under nominative fair use.
-            </p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
+<script src="dateback.js" defer></script>
 </body>
-
 </html>

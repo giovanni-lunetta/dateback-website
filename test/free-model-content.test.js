@@ -49,7 +49,7 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.4.2'), 'home page should present the current free-model release version');
+    assert.ok(source.includes('v1.5.0'), 'home page should present the current release version');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
@@ -80,19 +80,21 @@ test('legal pages describe free app and optional external donations', () => {
 
     assert.equal(terms.includes('Polar.sh'), false);
     assert.equal(privacy.includes('Polar.sh'), false);
-    assert.ok(terms.includes('Last Updated:</strong> May 5, 2026'));
-    assert.ok(privacy.includes('Last Updated:</strong> May 12, 2026'));
-    assert.ok(terms.includes('DateBack is currently provided as a free download'));
-    assert.ok(terms.includes('Optional donations are processed by Buy Me A Coffee'));
-    assert.ok(privacy.includes('DateBack does not require a license key'));
-    assert.ok(privacy.includes('Optional donations are handled by Buy Me A Coffee'));
-    assert.ok(privacy.includes('GDPR and CCPA Notes'));
+    assert.ok(terms.includes('Last Updated:</strong> May 14, 2026'));
+    assert.ok(privacy.includes('Last Updated:</strong> May 14, 2026'));
+    assert.ok(terms.includes('DateBack is provided as a free download'));
+    assert.ok(terms.includes('Optional donations'));
+    assert.ok(privacy.includes('does not require a license key, account, purchase, or in-app activation'));
+    assert.ok(privacy.includes('Buy Me A Coffee'));
+    assert.ok(privacy.includes('European Economic Area'));
 });
 
-test('install page reflects current free release size guidance', () => {
+test('install page reflects current multi-platform release guidance', () => {
     const source = read('install.html');
 
-    assert.ok(source.includes('about 180 MB'));
+    assert.ok(source.includes('-arm64.dmg'));
+    assert.ok(source.includes('-x64.dmg'));
+    assert.ok(source.includes('-x64-win.exe'));
     assert.equal(source.includes('about 80 MB'), false);
 });
 
@@ -124,7 +126,7 @@ test('redirects canonicalize www dateback domain to apex HTTPS', () => {
 });
 
 test('CSS exposes legacy variable aliases used by website components', () => {
-    const source = read('styles.css');
+    const source = read('dateback.css');
 
     for (const variable of [
         '--text-primary',
@@ -138,22 +140,67 @@ test('CSS exposes legacy variable aliases used by website components', () => {
 });
 
 test('contact form fields have a visible scoped focus treatment', () => {
-    const source = read('styles.css');
+    const source = read('dateback.css');
 
     assert.match(source, /\.contact-modal\s+\.form-group\s+(?:input|textarea):focus-visible/);
     assert.match(source, /box-shadow:\s*0 0 0 3px rgba\(136,\s*189,\s*242,\s*0\.28\)/);
 });
 
-test('mobile menu buttons declare explicit button type', () => {
+test('non-submit buttons declare explicit button type', () => {
+    for (const file of allHtmlFiles) {
+        const source = read(file);
+        const matches = source.match(/<button\b(?![^>]*type=)[^>]*>/g) || [];
+
+        assert.deepEqual(matches, [], `${file} should not include buttons without explicit type`);
+    }
+});
+
+test('public pages load the current website CSS and JS assets', () => {
+    for (const file of allHtmlFiles) {
+        const source = read(file);
+        assert.ok(source.includes('<link rel="stylesheet" href="dateback.css">'), `${file} should load dateback.css`);
+        assert.ok(source.includes('<script src="dateback.js" defer></script>'), `${file} should load dateback.js`);
+        assert.equal(source.includes('styles.css'), false, `${file} should not load old styles.css`);
+        assert.equal(source.includes('script.js'), false, `${file} should not load old script.js`);
+    }
+});
+
+test('all referenced redesign assets are present for deploy', () => {
+    const required = [
+        'dateback.css',
+        'dateback.js',
+        'images/app_home.webp',
+        'images/app_opening.webp',
+        'images/app_processing_complete.webp'
+    ];
+
+    for (const file of required) {
+        const absolute = path.join(root, file);
+        assert.ok(fs.existsSync(absolute), `${file} should exist for Netlify deploy`);
+        assert.equal(fs.statSync(absolute).size > 0, true, `${file} should not be empty`);
+    }
+
+    const index = read('index.html');
+    for (const file of required) {
+        assert.ok(index.includes(file), `index.html should reference ${file}`);
+    }
+});
+
+test('strict CSP pages do not rely on inline styles', () => {
+    for (const file of allHtmlFiles) {
+        const source = read(file);
+        assert.equal(/<style[\s>]/i.test(source), false, `${file} should not include inline <style> blocks`);
+        assert.equal(/\sstyle="/i.test(source), false, `${file} should not include inline style attributes`);
+    }
+});
+
+test('public copy does not overstate offline behavior', () => {
     for (const file of htmlFiles) {
         const source = read(file);
-        const matches = source.match(/<button[^>]*class="mobile-menu-btn"[^>]*>/g) || [];
-
-        assert.ok(matches.length > 0, `${file} should include a mobile menu button`);
-        for (const match of matches) {
-            assert.match(match, /\stype="button"/, `${file} mobile menu button should not default to submit`);
-        }
+        assert.equal(source.includes('No Internet Required'), false, `${file} should not make absolute offline claims`);
+        assert.equal(source.includes('No data collection. Ever.'), false, `${file} should not make absolute no-data-collection claims`);
     }
+    assert.ok(read('privacy-policy.html').includes('Some Snapchat exports include media links'));
 });
 
 test('primary pages expose a main content landmark target', () => {
@@ -252,6 +299,12 @@ test('all public HTML pages declare 1200 by 630 social image metadata', () => {
         assert.match(source, /<meta property="og:image:width" content="1200">/, `${file} should declare OG width`);
         assert.match(source, /<meta property="og:image:height" content="630">/, `${file} should declare OG height`);
     }
+});
+
+test('sitemap includes current public pages and release freshness', () => {
+    const source = read('sitemap.xml');
+    assert.ok(source.includes('<loc>https://dateback.app/licenses.html</loc>'));
+    assert.ok(source.includes('<lastmod>2026-05-15</lastmod>'));
 });
 
 test('sitemap orders higher-priority pages before lower-priority pages', () => {

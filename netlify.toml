@@ -26,23 +26,23 @@
     # Content Security Policy (CSP)
     # Explanation of directives:
     # - default-src 'self': Only load resources from same origin by default
-    # - script-src: Allow scripts from self and inline page handlers
-    # - style-src: Allow styles from self and inline (for dynamic styles)
+    # - script-src: Allow scripts from self only (no inline handlers — all onclick replaced with delegated listeners)
+    # - style-src: Allow styles from self and Google Fonts (redesign uses DM Sans via fonts.googleapis.com)
     # - img-src: Allow local images, data: URIs, and the static Buy Me A Coffee button image host
-    # - font-src: Allow fonts from self and data: URIs
+    # - font-src: Allow fonts from self, data: URIs, and Google Fonts static host (fonts.gstatic.com)
     # - connect-src: Allow connections to self
-    # - frame-src: Allow YouTube embeds (for video iframes)
+    # - frame-src: 'none' — no iframes used on this site
     # - frame-ancestors 'none': Prevent embedding in iframes (same as X-Frame-Options)
     # - base-uri 'self': Prevent <base> tag hijacking
-    # - form-action: Allow forms to submit to self
+    # - form-action: Allow forms to submit to self (Netlify Forms)
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' 'unsafe-inline';
-      style-src 'self' 'unsafe-inline';
+      script-src 'self';
+      style-src 'self' https://fonts.googleapis.com;
       img-src 'self' data: https://cdn.buymeacoffee.com;
-      font-src 'self' data:;
+      font-src 'self' data: https://fonts.gstatic.com;
       connect-src 'self';
-      frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
+      frame-src 'none';
       frame-ancestors 'none';
       base-uri 'self';
       form-action 'self';
@@ -80,21 +80,27 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+[[headers]]
+  for = "/licenses"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # Cache static assets (images, CSS, JS)
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
 
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    # Not content-hashed filenames — use a short TTL so fixes reach users promptly.
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/*.xml"

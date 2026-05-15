@@ -1,981 +1,828 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="slate">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DateBack | Archive Memories the Right Way</title>
-    <meta name="description"
-        content="The only tool that fixes dates and metadata. Don't lose your past—archive memories the right way.">
-    <link rel="canonical" href="https://dateback.app/">
-
-    <meta property="og:title" content="DateBack | Archive Memories the Right Way">
-    <meta property="og:description"
-        content="The only tool that fixes dates and metadata. Don't lose your past—archive memories the right way.">
-    <meta property="og:url" content="https://dateback.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DateBack | Archive Memories the Right Way">
-    <meta name="twitter:description"
-        content="The only tool that fixes dates and metadata. Don't lose your past—archive memories the right way.">
-    <meta name="twitter:image" content="https://dateback.app/images/og-image.jpg">
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateBack | Archive Memories the Right Way</title>
+  <meta name="description" content="The dedicated app that fixes Snapchat export dates and metadata. Don't lose your past—archive memories the right way.">
+  <link rel="canonical" href="https://dateback.app/">
+  <meta property="og:title" content="DateBack | Archive Memories the Right Way">
+  <meta property="og:description" content="Fix Snapchat export dates and metadata. Don't lose your past—archive memories the right way.">
+  <meta property="og:url" content="https://dateback.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dateback.app/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DateBack — restore your Snapchat memories' original dates">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DateBack | Archive Memories the Right Way">
+  <meta name="twitter:description" content="Fix Snapchat export dates and metadata. Your 2018 memories deserve to stay in 2018.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dateback.css">
+  <link rel="preload" as="image" href="images/logo.png" type="image/png">
 </head>
-
 <body>
-    <!-- Accessibility Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav>
-        <div class="container nav-container">
-            <a href="/" class="logo">
-                <img src="images/logo.png" alt="DateBack logo" class="logo-img">
-                DateBack<span>.app</span>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ===================== NAV ===================== -->
+<nav id="nav">
+  <div class="nav-inner container">
+    <a href="/" class="nav-logo">
+      <img src="images/logo.png" alt="DateBack logo" width="28" height="28">
+      <span class="nav-logo-name">DateBack</span><span class="nav-logo-dot">.app</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#proof">Results</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#comparison">Compare</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:support@dateback.app" data-action="open-contact" data-subject="Support Request">Support</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn-nav-cta" target="_blank" rel="noopener noreferrer">
+        <span id="nav-dl-label">Download</span>
+      </a>
+      <button type="button" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-mobile-menu">
+    <a href="#proof">Results</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#comparison">Compare</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:support@dateback.app" data-action="open-contact" data-subject="Support Request">Support</a>
+    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="mobile-download-btn" target="_blank" rel="noopener noreferrer">
+      <span id="mobile-dl-label">Download</span>
+    </a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-inner container">
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Free Download &middot; Apple Notarized &middot; Runs Locally
+      </div>
+
+      <h1>Your Snapchat memories<br>deserve the <em>right date.</em></h1>
+
+      <p class="hero-sub">Snapchat exports break your photo timeline — every memory shows today's date. DateBack reads the hidden metadata and restores the original, so your 2018 memories actually stay in 2018.</p>
+
+      <div class="hero-cta-wrap">
+        <div class="hero-download-group">
+          <div class="hero-platform-row">
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn-primary btn-large" id="hero-download-btn" target="_blank" rel="noopener noreferrer">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span id="hero-dl-label">Download for Mac</span>
             </a>
-
-            <div class="nav-center">
-                <a href="#real-example">Results</a>
-                <a href="#how-it-works">How it works</a>
-                <a href="#comparison">Compare</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-                <a href="#" data-action="open-contact" data-subject="Support Request">Support</a>
-            </div>
-
-            <div class="nav-right">
-                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="nav-cta desktop-only" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-                <button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-            </div>
+          </div>
+          <button type="button" class="other-platforms-toggle" id="other-platforms-toggle">Other platforms ↓</button>
+          <div class="other-platforms-menu" id="other-platforms-menu">
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Apple Silicon (M1 · M2 · M3 · M4)</a>
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Intel Mac (Core i5 · i7 · i9)</a>
+            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Windows 10 / 11 &middot; x64</a>
+          </div>
         </div>
+        <a href="#proof" class="btn-ghost">See how it works</a>
+      </div>
 
-        <div class="mobile-menu">
-            <a href="#real-example">Results</a>
-            <a href="#how-it-works">How it works</a>
-            <a href="#comparison">Compare</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#" data-action="open-contact" data-subject="Support Request">Support</a>
-            <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="nav-cta mobile-nav-download" target="_blank"
-                rel="noopener noreferrer">Download for Mac</a>
-        </div>
-    </nav>
-
-    <main id="main-content">
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="container">
-            <div class="hero-badges">
-                <span class="hero-badge-pill">🍎 Apple Notarized</span>
-                <span class="hero-badge-pill">💻 Runs 100% Locally</span>
-                <span class="hero-badge-pill">Free Download</span>
-            </div>
-            <h1>
-                Don't lose your past.<br>
-                Archive <span class="gradient-text">Snapchat Memories</span> the right way.
-            </h1>
-            <p>
-                Export your Snapchat Memories, run DateBack, and get perfectly dated, organized files — <br>
-                ready to upload to Google Photos, iCloud, or any cloud storage forever.
-            </p>
-            <div class="hero-buttons">
-                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    Download — Apple Silicon
-                    <span class="btn-arch-label">M1 · M2 · M3 · M4</span>
-                </a>
-                <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                    class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    Download — Intel Mac
-                    <span class="btn-arch-label">Core i5 · i7 · i9</span>
-                </a>
-                <a href="#features" class="btn btn-secondary">See Features</a>
-            </div>
-            <p class="system-requirements">
-                <strong>System requirements:</strong> macOS 11.0 (Big Sur) or later &middot; Apple Silicon (M1–M4) or Intel Mac
-            </p>
-
-            <div class="hero-carousel">
-                <div class="carousel-wrapper">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">‹</button>
-                    <div class="carousel-track">
-                        <picture>
-                            <source srcset="images/app_opening.webp" type="image/webp">
-                            <img src="images/app_opening.png" alt="DateBack App - Welcome Screen"
-                                class="carousel-image active" width="1798" height="1978" loading="eager"
-                                fetchpriority="high" decoding="async">
-                        </picture>
-                        <picture>
-                            <source srcset="images/app_home.webp" type="image/webp">
-                            <img src="images/app_home.png" alt="DateBack App Interface - Ready to Process Your Memories"
-                                class="carousel-image" width="1798" height="1978" loading="lazy" decoding="async">
-                        </picture>
-                        <picture>
-                            <source srcset="images/app_processing_complete.webp" type="image/webp">
-                            <img src="images/app_processing_complete.png" alt="DateBack App - Processing Complete"
-                                class="carousel-image" width="1794" height="1970" loading="lazy" decoding="async">
-                        </picture>
-                    </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">›</button>
-                </div>
-                <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
-                    <span class="dot active" data-index="0" role="button" tabindex="0" aria-label="Slide 1" aria-selected="true"></span>
-                    <span class="dot" data-index="1" role="button" tabindex="0" aria-label="Slide 2" aria-selected="false"></span>
-                    <span class="dot" data-index="2" role="button" tabindex="0" aria-label="Slide 3" aria-selected="false"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DATES SECTION: Real Photo Proof -->
-    <section id="real-example">
-        <div class="container">
-            <div class="section-intro-wide">
-                <h2>Restore <span class="gradient-text">Date Taken</span>. Keep your timeline.</h2>
-                <p class="text-lead">Snapchat exports overwrite 'Date Taken' with the
-                    export date. DateBack restores the original.</p>
-            </div>
-
-            <!-- GLOBAL TOGGLE -->
-            <div class="diff-global-toggle" role="group" aria-label="Toggle date view for all examples">
-                <button class="diff-global-btn active" data-state="without" aria-pressed="true" type="button">
-                    ✕ Without DateBack
-                </button>
-                <button class="diff-global-btn" data-state="with" aria-pressed="false" type="button">
-                    ✓ With DateBack
-                </button>
-            </div>
-
-            <!-- STAGE: Fixed-height container for smooth transitions -->
-            <div class="diff-stage">
-                <!-- VIEW: WITHOUT DateBack (default, shown initially) -->
-                <div class="diff-view diff-view--without" aria-hidden="false">
-                    <div class="diff-group-card">
-                        <div class="diff-group-header">
-                            <div class="diff-group-title">Both memories appear as: <span class="diff-bad-date">Jan 7,
-                                    2026</span></div>
-                            <div class="diff-badge diff-badge--export">Export date</div>
-                        </div>
-                        <div class="diff-group-grid">
-                            <div class="diff-group-item">
-                                <div class="diff-group-label">Memory from 2016</div>
-                                <div class="diff-media">
-                                    <img src="images/example-lexi-2016.jpg" alt="Snapchat memory from 2016"
-                                        loading="lazy">
-                                    <div class="diff-pill diff-pill--without">Taken: Jan 7, 2026 ✕</div>
-                                </div>
-                            </div>
-                            <div class="diff-group-item">
-                                <div class="diff-group-label">Memory from 2025</div>
-                                <div class="diff-media">
-                                    <img src="images/example-lexi-2025.jpg" alt="Snapchat memory from 2025"
-                                        loading="lazy">
-                                    <div class="diff-pill diff-pill--without">Taken: Jan 7, 2026 ✕</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VIEW: WITH DateBack (hidden initially) -->
-                <div class="diff-view diff-view--with" aria-hidden="true">
-                    <div class="diff-cards-grid">
-                        <div class="diff-card-item">
-                            <div class="diff-card">
-                                <div class="diff-footer diff-footer--top">
-                                    <span class="diff-footer-date">Nov 20, 2016</span>
-                                    <span class="diff-footer-badge">Date taken ✓</span>
-                                </div>
-                                <div class="diff-media">
-                                    <img src="images/example-lexi-2016.jpg" alt="Snapchat memory from 2016"
-                                        loading="lazy">
-                                    <div class="diff-pill">Taken: Nov 20, 2016 ✓</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="diff-card-item">
-                            <div class="diff-card">
-                                <div class="diff-footer diff-footer--top">
-                                    <span class="diff-footer-date">Aug 30, 2025</span>
-                                    <span class="diff-footer-badge">Date taken ✓</span>
-                                </div>
-                                <div class="diff-media">
-                                    <img src="images/example-lexi-2025.jpg" alt="Snapchat memory from 2025"
-                                        loading="lazy">
-                                    <div class="diff-pill">Taken: Aug 30, 2025 ✓</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dynamic caption that changes based on toggle state -->
-            <div class="example-caption" id="toggle-caption">
-                <div class="caption-without caption-warning">
-                    ⚠️ Without DateBack, your <span class="caption-warning-highlight">entire photo
-                        timeline</span> collapses to <span class="caption-warning-highlight">one day</span>
-                </div>
-                <div class="caption-with caption-success">
-                    💡 DateBack reads <span class="caption-accent">hidden JSON</span> data and restores <span
-                        class="caption-accent">original dates</span>.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OVERLAY MERGE SECTION -->
-    <section id="overlay-comparison">
-        <div class="container">
-            <div class="section-intro-wide-spaced">
-                <h2>Merge <span class="gradient-text">overlays</span> automatically</h2>
-                <p>Snapchat exports overlay text and drawings as separate files. DateBack automatically merges them back
-                    into one complete memory.</p>
-            </div>
-
-            <div class="overlay-comparison-grid">
-                <!-- Without DateBack -->
-                <div class="comparison-item bad">
-                    <h3 class="comparison-title bad">❌ Without DateBack</h3>
-                    <div class="comparison-box">
-                        <div class="file-pair">
-                            <div class="file-item">
-                                <img src="images/main.jpg" alt="Gaming setup photo without overlay text and drawings"
-                                    loading="lazy" width="802" height="1488">
-                                <p class="file-name">main.jpg</p>
-                            </div>
-                            <div class="file-separator">+</div>
-                            <div class="file-item overlay-file">
-                                <img src="images/overlay.png" alt="Snapchat overlay with text and drawings separate"
-                                    loading="lazy" width="828" height="1488">
-                                <p class="file-name">overlay.png</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="comparison-result bad-result">❌ Broken into parts</p>
-                </div>
-
-                <!-- With DateBack -->
-                <div class="comparison-item good">
-                    <h3 class="comparison-title good">✅ With DateBack</h3>
-                    <div class="comparison-box">
-                        <div class="merged-result">
-                            <img src="images/merged.jpg"
-                                alt="Complete memory with overlay text and drawings perfectly merged" loading="lazy"
-                                width="802" height="1488">
-                            <p class="file-name">2020-08-23_17-09-51.jpg</p>
-                        </div>
-                    </div>
-                    <p class="comparison-result good-result">✅ Perfect merged memory</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW DATEBACK WORKS (3 Steps) -->
-    <section id="how-it-works">
-        <div class="container">
-            <div class="section-intro">
-                <h2>How <span class="gradient-text">DateBack</span> Works</h2>
-                <p>The gist — what DateBack does in about 60 seconds.</p>
-            </div>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number-circle">1</div>
-                    <h3>Open DateBack</h3>
-                    <p>App automatically finds your Snapchat export—no searching required.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number-circle">2</div>
-                    <h3>Choose Location & Start</h3>
-                    <p>Pick where to save your memories, then hit "Start Processing."</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number-circle">3</div>
-                    <h3>Upload in Batches</h3>
-                    <p>DateBack organizes files into cloud-ready folders with correct dates restored.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRIVACY & SECURITY (Merged) -->
-    <section id="privacy">
-        <div class="container">
-            <div class="section-intro">
-                <h2>Privacy & <span class="gradient-text">Security</span></h2>
-                <p>Your memories are personal. DateBack keeps them that way—securely.</p>
-            </div>
-
-            <div class="privacy-grid">
-                <div class="privacy-card">
-                    <div class="icon">✓</div>
-                    <h4>Apple Notarized</h4>
-                    <p>Signed and verified by Apple for your security.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="icon">🔒</div>
-                    <h4>Runs 100% Locally</h4>
-                    <p>No cloud processing. Everything happens on your Mac.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="icon">🚫</div>
-                    <h4>No Uploads</h4>
-                    <p>Your files never leave your device.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="icon">👤</div>
-                    <h4>No Account Required</h4>
-                    <p>No sign-up. No tracking. No data collection.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="icon">☕</div>
-                    <h4>Optional Support</h4>
-                    <p>Free to use. Support the project only if it helps you.</p>
-                </div>
-                <div class="privacy-card">
-                    <div class="icon">📧</div>
-                    <h4>Email Support</h4>
-                    <p><a href="#" data-action="open-contact" data-subject="Support Request"
-                            class="link-accent-green">support@dateback.app</a></p>
-                    <p class="support-commitment">We respond within 48 hours.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES / WHY DATEBACK -->
-    <section id="features">
-        <div class="container">
-            <div class="section-intro">
-                <h2>Why Use <span class="gradient-text">DateBack</span>?</h2>
-                <p>Standard export tools are broken. They strip your dates and crash on large files. DateBack was built
-                    to solve the problems that others ignore.</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card animate-fade-in delay-1">
-                    <div class="feature-icon">🗓️</div>
-                    <h3>The "Time Travel" Fix</h3>
-                    <p>If you download manually, all your photos say "Today" for the date. DateBack reads the hidden JSON
-                        data and injects the original date back into the file. Your 2018 memories will actually stay in
-                        2018.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-2">
-                    <div class="feature-icon">☁️</div>
-                    <h3>Cloud Mode Streaming</h3>
-                    <p>Have 50GB of memories but only 10GB free? No problem. Cloud Mode processes in batches of 500
-                        files, pausing so you can upload and delete before continuing. Never run out of space.</p>
-                </div>
-                <div class="feature-card animate-fade-in delay-3">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Smart Batching</h3>
-                    <p>Uploading 20,000 files to Google Photos crashes your browser. DateBack automatically organizes
-                        your files into neat batches of 500, making cloud upload smooth and crash-free.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARISON -->
-    <section id="comparison">
-        <div class="container">
-            <h2>Stop Renting Your <span class="gradient-text">Own Memories</span></h2>
-            <p class="comparison-subtitle">Cloud subscriptions charge you monthly. See how the costs stack up.</p>
-
-            <div class="comparison-table">
-                <div class="comparison-header feature-header">Feature</div>
-                <div class="comparison-header competitor">Cloud Subscription</div>
-                <div class="comparison-header dateback">DateBack ✓</div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell feature">Cost</div>
-                    <div class="comparison-cell competitor">$24/year<br><small>(recurring)</small></div>
-                    <div class="comparison-cell dateback">$0<br><small>(optional support)</small></div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell feature">Storage Limit</div>
-                    <div class="comparison-cell competitor">100GB Limit</div>
-                    <div class="comparison-cell dateback">Unlimited<br><small>(your drive)</small></div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell feature">Ownership</div>
-                    <div class="comparison-cell competitor">You rent access</div>
-                    <div class="comparison-cell dateback">You own the files</div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell feature">Dates / Metadata</div>
-                    <div class="comparison-cell competitor">Locked in app</div>
-                    <div class="comparison-cell dateback">Fixed (EXIF)</div>
-                </div>
-
-                <div class="comparison-row">
-                    <div class="comparison-cell feature">Privacy</div>
-                    <div class="comparison-cell competitor">Stored on external servers</div>
-                    <div class="comparison-cell dateback">Runs locally (offline)</div>
-                </div>
-            </div>
-
-            <!-- Mobile-friendly comparison (hidden on desktop) -->
-            <div class="comparison-mobile">
-                <div class="comparison-mobile-card competitor-card">
-                    <h4>❌ Cloud Subscription</h4>
-                    <ul>
-                        <li><strong>Cost:</strong> $24/year (recurring)</li>
-                        <li><strong>Storage:</strong> 100GB Limit</li>
-                        <li><strong>Ownership:</strong> You rent access</li>
-                        <li><strong>Dates:</strong> Locked in app</li>
-                        <li><strong>Privacy:</strong> External servers</li>
-                    </ul>
-                </div>
-                <div class="comparison-mobile-card dateback-card">
-                    <h4>✓ DateBack</h4>
-                    <ul>
-                        <li><strong>Cost:</strong> Free download</li>
-                        <li><strong>Storage:</strong> Unlimited (your drive)</li>
-                        <li><strong>Ownership:</strong> You own the files</li>
-                        <li><strong>Dates:</strong> Fixed (EXIF)</li>
-                        <li><strong>Privacy:</strong> Runs locally (offline)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="comparison-caption">
-                💰 Save $200+ over the next 10 years by owning your data today.
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing">
-        <div class="container">
-            <div class="pricing-card">
-                <span class="pricing-badge">Free for Everyone</span>
-                <h3>Free Download</h3>
-                <div class="price">$0 <span>/ optional support</span></div>
-                <p>Save your memories before they're gone forever. No account, payment, or activation key required.</p>
-
-                <ul class="check-list">
-                    <li>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="10" fill="rgba(44, 192, 105, 0.2)" />
-                            <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        Unlimited Photos & Videos
-                    </li>
-                    <li>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="10" fill="rgba(44, 192, 105, 0.2)" />
-                            <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        EXIF Date Correction (Metadata Fix)
-                    </li>
-                    <li>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="10" fill="rgba(44, 192, 105, 0.2)" />
-                            <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        Cloud Mode — Zero Disk Space Needed
-                    </li>
-                    <li>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="10" fill="rgba(44, 192, 105, 0.2)" />
-                            <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        Smart Resume (Never Lose Progress)
-                    </li>
-                    <li>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <circle cx="10" cy="10" r="10" fill="rgba(44, 192, 105, 0.2)" />
-                            <path d="M6 10l3 3 5-6" stroke="#2cc069" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        macOS 11+ (Apple Silicon &amp; Intel)
-                    </li>
-                </ul>
-
-                <div class="download-btn-group">
-                    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                        Apple Silicon
-                        <span class="btn-arch-label">M1 · M2 · M3 · M4</span>
-                    </a>
-                    <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest"
-                        class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                        Intel Mac
-                        <span class="btn-arch-label">Core i5 · i7 · i9</span>
-                    </a>
-                </div>
-                <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" class="bmc-pricing-link">
-                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="174" height="48" class="bmc-pricing-img">
-                </a>
-
-                <p class="pricing-note">
-                    Download the latest notarized Mac release from GitHub.
-                </p>
-                <p class="pricing-version">
-                    Current version: <a href="changelog.html" class="link-accent-blue">v1.4.2</a>
-                </p>
-                <p class="pricing-install">
-                    <a href="/install.html" class="install-guide-link">Installation guide &rarr;</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- FAQ -->
-    <section id="faq">
-        <div class="container">
-            <h2 class="heading-center">Frequently Asked <span
-                    class="gradient-text">Questions</span></h2>
-
-            <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>Is this safe? Do you see my photos?</summary>
-                    <p>It is 100% safe. DateBack processes everything locally on your Mac — your photos are never
-                        uploaded, tracked, or seen by anyone but you.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Does this work on Windows or Intel Macs?</summary>
-                    <p><strong>Intel Macs are now supported.</strong> Download the file ending in <code>-x64.dmg</code> from the releases page. Apple Silicon (M1–M4) users should download the file ending in <code>-arm64.dmg</code>. Windows is not currently supported.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>My download is 100GB+. Will this work?</summary>
-                    <p>Yes! We specifically built Cloud Mode for this. Unlike other tools that crash trying to unzip
-                        everything at once, DateBack streams one file at a time. It handles massive libraries
-                        effortlessly.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>What is Cloud Mode?</summary>
-                    <p>Cloud Mode processes your memories in batches of 500 and automatically delivers each batch to a
-                        cloud folder you choose — iCloud Drive, Google Drive, OneDrive, Dropbox, or Box. DateBack
-                        copies files into your synced folder; your cloud provider's app handles the upload to the
-                        cloud. After each batch completes, the app pauses so you can continue to the next batch or
-                        stop for now. The <strong>Open Output Folder</strong> button in Cloud Mode opens your cloud
-                        destination folder directly.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>How does setup work?</summary>
-                    <p>DateBack walks you through five steps: (1) open the app — it automatically finds your downloaded
-                        Snapchat ZIP files; (2) choose where memories will be stored; (3) review the storage check; (4)
-                        pick Computer or Cloud mode; (5) if you chose Cloud, select a destination folder and optionally
-                        adjust Advanced settings. If you don't choose a folder, memories are saved to
-                        <strong>~/Pictures/SnapchatMemories</strong> by default.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Snapchat gave me multiple ZIP files. What do I do?</summary>
-                    <p>This is normal for large Snapchat exports. You'll see files named like
-                        <strong>mydata~[timestamp].zip</strong>, <strong>mydata~[timestamp]-1.zip</strong>,
-                        <strong>mydata~[timestamp]-2.zip</strong>, and so on. Download each one from Snapchat's download
-                        page and save them all to the same folder — Downloads works fine. When you open DateBack, it
-                        automatically finds all the files from the same export and processes them together as one.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Can I resume if I stop midway?</summary>
-                    <p>Yes. When you restart processing on an existing output folder, DateBack shows a resume modal with
-                        three options: <strong>Skip Already Processed</strong> — fast resume using saved progress
-                        (recommended); <strong>Verify Files</strong> — double-checks files on disk, safer but slower;
-                        or <strong>Start Fresh</strong> — clears the folder and begins again. In Computer mode you can
-                        also enable <em>Pause after every batch (500 files)</em> to pause automatically between
-                        batches.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Is DateBack really free?</summary>
-                    <p>Yes. DateBack is a free download and does not require an account, payment, or activation key.
-                        If it helps you recover your memories, you can optionally
-                        <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer">support the project on Buy Me A Coffee</a>.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>I got a weird error that I can't fix. What should I do?</summary>
-                    <p>If you're experiencing an error, first try restarting the app. If the problem persists,
-                        <strong>export your support logs</strong> by going to <strong>Help → Export Support
-                            Logs</strong> in the app's menu. This creates a ZIP file with diagnostic information. Then,
-                        email the ZIP file to <a href="mailto:support@dateback.app">support@dateback.app</a>
-                        along with a description of the issue. This helps us identify and fix the exact cause of your
-                        error quickly!
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>What if it doesn't work for me?</summary>
-                    <p>Email <a href="mailto:support@dateback.app">support@dateback.app</a> with the error details and,
-                        when possible, an exported support logs ZIP from the app. We respond within 48 hours.
-                    </p>
-                </details>
-            </div>
-
-            <h2 class="heading-center-sub">Troubleshooting</h2>
-            <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>The download page is confusing. Which file do I need?</summary>
-                    <p>Open the latest GitHub release and look for two <strong>.dmg</strong> files. Download
-                        <strong>DateBack-...-arm64.dmg</strong> if you have an Apple Silicon Mac (M1, M2, M3, M4),
-                        or <strong>DateBack-...-x64.dmg</strong> if you have an Intel Mac. Not sure which?
-                        Click <strong>&#63743; &rarr; About This Mac</strong> &mdash; look for "Apple M" (Silicon) or
-                        "Intel Core" (Intel).</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>macOS says DateBack cannot be opened</summary>
-                    <p>On first launch, right-click DateBack in Applications, choose <strong>Open</strong>, then click
-                        <strong>Open</strong> in the macOS prompt. This is a standard Gatekeeper prompt for new apps.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>ZIP file is invalid / missing memories_history.json</summary>
-                    <p>DateBack checks your ZIP for a file called <strong>memories_history.json</strong>. If it is
-                        missing, your Snapchat export was requested without the right options. Go back to Snapchat's
-                        data download page, make sure both <strong>"Export your Memories"</strong> and
-                        <strong>"Export JSON Files"</strong> are toggled ON, and request a new export.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Not a recognized cloud folder</summary>
-                    <p>Cloud Mode only accepts folders inside a supported sync service. If you see <em>"Not a recognized
-                            cloud folder. Choose iCloud Drive, Google Drive, OneDrive, Dropbox, or Box."</em>, pick a
-                        folder that lives inside one of those five services. Folders set up via symlinks are not
-                        allowed.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Retry Corrupted Files doesn't work</summary>
-                    <p>The retry feature requires a <strong>detailed_report.json</strong> file created by the previous
-                        processing run. If that file is missing, the app will show <em>"No detailed_report.json found.
-                            Run full processing first."</em> Complete a full processing run first, then use
-                        <strong>Retry Corrupted Files</strong> from the completion screen.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Open Output Folder doesn't open anything</summary>
-                    <p>For security, DateBack only opens folders that were approved during the current session. If you
-                        restart the app or change your selected folder, the previous path is no longer active. To open
-                        your output folder, re-run processing with the same folder selected, or navigate to it manually
-                        in Finder. In Cloud Mode this button opens your cloud destination folder, not the local output
-                        folder.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>DateBack found fewer ZIP files than I downloaded from Snapchat</summary>
-                    <p>DateBack looks for all ZIP files from the same export in the same folder. Make sure every file
-                        you downloaded (<strong>mydata~[timestamp].zip</strong>,
-                        <strong>mydata~[timestamp]-1.zip</strong>, etc.) is in the same folder — don't move some to a
-                        subfolder or rename them. If you've already moved them around, put them all back together in one
-                        folder, then drag that folder into DateBack or click <strong>Find My Zip
-                            Automatically</strong>.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPORT GUIDE (Collapsed Accordion) -->
-    <section id="export-guide">
-        <div class="container">
-            <h2 class="heading-center-sm">Need Help <span class="gradient-text">Exporting</span>
-                Your Data?</h2>
-
-            <details class="export-guide-accordion">
-                <summary>How to export your data (step-by-step)</summary>
-                <div class="export-guide-content">
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">1</div>
-                            <div class="step-text">
-                                <h3>Select Your Data</h3>
-                                <p>Go to your social platform's data download page and log in. <strong>Crucial:</strong>
-                                    Make sure both <strong>"Export your Memories"</strong> AND <strong>"Export JSON
-                                        Files"</strong> are toggled ON. Without the JSON files, the dates will not be
-                                    fixed.</p>
-                                <div class="step-alert">
-                                    <strong>⚠️ Important: "My Eyes Only" Memories</strong><br>
-                                    Photos/videos in "My Eyes Only" <strong>cannot be exported</strong> unless you
-                                    unhide them first!<br><br>
-                                    <strong>Before requesting your data:</strong><br>
-                                    Open the app → My Eyes Only → Select → Select All → Three Dots → <strong>Unhide
-                                        Snaps</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP1.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP1.png"
-                                    alt="Select Export your Memories and Export JSON Files" loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">2</div>
-                            <div class="step-text">
-                                <h3>Choose Date Range</h3>
-                                <p>Scroll down to the date filter. Select <strong>"All Time"</strong> to ensure you get
-                                    everything. Confirm your email address at the bottom and click
-                                    <strong>"Submit."</strong>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP2.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP2.png" alt="Choose All Time date range"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">3</div>
-                            <div class="step-text">
-                                <h3>Wait for Processing</h3>
-                                <p>The service will begin creating your files. You will see a "Processing" status. You
-                                    do not need to stay on this page; you can close the tab.</p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP3.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP3.png" alt="Processing status screen" loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">4</div>
-                            <div class="step-text">
-                                <h3>Check Your Email</h3>
-                                <p>When your data is ready (this can take minutes or hours depending on the size), you
-                                    will get an email notification. Open it and click the download link.</p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP4.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP4.png" alt="Email notification" loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">5</div>
-                            <div class="step-text">
-                                <h3>Access Your Exports</h3>
-                                <p>You will be taken back to the website. You should see your export listed under
-                                    <strong>"Your exports."</strong> Click the <strong>"See exports"</strong> button if
-                                    needed.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP5.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP5.png" alt="Your exports section" loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">6</div>
-                            <div class="step-text">
-                                <h3>Download the ZIP File(s)</h3>
-                                <p>Click the blue <strong>Download</strong> button next to your data file. If Snapchat
-                                    split your export into multiple files, you'll see several entries — download each one
-                                    and keep them all in the same folder when saving.</p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP6.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP6.png" alt="Download button" loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="tutorial-step-large">
-                        <div class="step-header">
-                            <div class="step-number">7</div>
-                            <div class="step-text">
-                                <h3>Locate the Files</h3>
-                                <p>Open your Downloads folder. You'll see one or more files named
-                                    <strong>mydata~[timestamp].zip</strong>,
-                                    <strong>mydata~[timestamp]-1.zip</strong>, etc. — all from the same export. Do not
-                                    unzip them and keep them in the same folder. DateBack will detect and handle them
-                                    automatically.</p>
-                            </div>
-                        </div>
-                        <div class="step-image">
-                            <picture>
-                                <source srcset="images/DownloadSnapchatDataP7.webp" type="image/webp">
-                                <img src="images/DownloadSnapchatDataP7.png" alt="ZIP file in Downloads folder"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </details>
-        </div>
-    </section>
-
-    <!-- Image Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+      <p class="hero-version">v1.5.0 &middot; macOS 11+ &middot; Windows 10+</p>
     </div>
 
-    <!-- Contact Modal -->
-    <div id="contactModal" class="contact-modal">
-        <div class="contact-modal-content">
-            <span class="contact-modal-close" data-action="close-contact">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </span>
-            <h2>Get in <span class="gradient-text">Touch</span></h2>
-            <p class="contact-modal-subtitle">Have a question or need support? We're here to
-                help!</p>
-
-            <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true"
-                enctype="multipart/form-data">
-                <input type="hidden" name="form-name" value="contact" />
-                <div class="form-group">
-                    <label for="contact-name">Name</label>
-                    <input type="text" id="contact-name" name="name" required placeholder="Your name">
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-email">Email</label>
-                    <input type="email" id="contact-email" name="email" required placeholder="your.email@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-subject">Subject</label>
-                    <input type="text" id="contact-subject" name="subject" required placeholder="What's this about?">
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" required placeholder="Tell us more..."
-                        rows="6"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-attachments">Attachments <span
-                            class="attachment-label-note">(optional, max 8MB per
-                            file)</span></label>
-                    <input type="file" id="contact-attachments" name="attachment" accept="image/*"
-                        class="file-input-styled">
-                    <small class="attachment-hint">You
-                        can attach screenshots or images to help us better understand your issue</small>
-                </div>
-
-                <button type="submit" class="btn btn-primary" id="contactSubmit">
-                    <span id="submitText">Send Message</span>
-                    <span id="submitSpinner">Sending...</span>
-                </button>
-            </form>
-
-            <div id="contactSuccess" class="contact-message contact-success">
-                ✓ Message sent successfully! We'll get back to you soon.
-            </div>
-            <div id="contactError" class="contact-message contact-error">
-                ✗ Oops! Something went wrong. Please email us directly at support@dateback.app
-            </div>
+    <div class="hero-visual">
+      <div class="app-frame">
+        <div class="app-frame-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
         </div>
+        <div class="app-screenshots">
+          <img src="images/app_home.webp" alt="DateBack main interface" class="app-screenshot active" loading="eager" fetchpriority="high">
+          <img src="images/app_processing_complete.webp" alt="DateBack processing complete screen" class="app-screenshot" loading="lazy">
+          <img src="images/app_opening.webp" alt="DateBack welcome screen" class="app-screenshot" loading="lazy">
+        </div>
+        <div class="app-frame-dots">
+          <span class="ss-dot active" data-idx="0"></span>
+          <span class="ss-dot" data-idx="1"></span>
+          <span class="ss-dot" data-idx="2"></span>
+        </div>
+      </div>
     </div>
 
-    <!-- anchor for app deep link: https://dateback.app/#install-guide -->
-    <section id="install-guide" class="install-guide-preview">
-        <div class="container">
-            <h2>Installation Guide</h2>
-            <p>New to DateBack? Our step-by-step guide walks you through downloading, opening the disk image, and handling the first-launch macOS Gatekeeper prompt.</p>
-            <a href="/install.html" class="btn btn-secondary">View Installation Guide &rarr;</a>
-        </div>
-    </section>
+  </div>
+</section>
 
-    <!-- Buy Me a Coffee -->
-    <section id="support" class="support-section">
-        <div class="container">
-            <h2 class="support-heading">DateBack is <span class="gradient-text">free, forever.</span></h2>
-            <p class="support-tagline">DateBack stays free. Optional coffees help cover signing, hosting, and maintenance.</p>
-            <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer" class="bmc-support-link">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" class="bmc-support-img">
-            </a>
-        </div>
-    </section>
+<!-- ===================== TRUST STRIP ===================== -->
+<div class="trust-strip">
+  <div class="trust-strip-inner container">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      Apple Notarized
+    </span>
+    <span class="strip-divider"></span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      100% Local Processing
+    </span>
+    <span class="strip-divider"></span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      No Account Required
+    </span>
+    <span class="strip-divider"></span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path><path d="M10.71 5.05A16 16 0 0 1 22.56 9"></path><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+      Local Processing
+    </span>
+    <span class="strip-divider"></span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      Free Forever
+    </span>
+  </div>
+</div>
 
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-logo">DateBack<span>.app</span></div>
-
-            <div class="footer-links">
-                <a href="#features">Features</a>
-                <a href="#export-guide">Export Guide</a>
-                <a href="install.html">Install Guide</a>
-                <a href="#faq">FAQ</a>
-                <a href="changelog.html">Changelog</a>
-                <a href="#" data-action="open-contact">Contact</a>
-                <a href="licenses.html">Open Source / Licenses</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-            </div>
-
-            <p class="footer-note">
-                Requires macOS 11+ &middot; Apple Silicon (M1–M4) or Intel Mac
-            </p>
-
-            <p>&copy; 2026 Giovanni Lunetta. All rights reserved.</p>
-
-            <p class="disclaimer">
-                DateBack is a third-party utility and is not affiliated with, endorsed by, or sponsored by any social
-                media platform.
-                All trademarks are property of their respective owners. Use of platform names is for descriptive
-                purposes only under nominative fair use.
-            </p>
-        </div>
-    </footer>
-
-
-    <!-- Sticky Mobile CTA Bar (mobile only) -->
-    <div class="mobile-cta-bar">
-        <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn btn-primary"
-            target="_blank" rel="noopener noreferrer">
-            Download Free
-        </a>
+<!-- ===================== PROOF ===================== -->
+<section id="proof">
+  <div class="container">
+    <div class="section-header">
+      <h2>Snapchat breaks your timeline.<br>DateBack fixes it.</h2>
+      <p>Every photo exported from Snapchat carries today's date. DateBack reads the hidden <code>memories_history.json</code> file and writes the original capture date back into each file — permanently.</p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="proof-toggle" role="group" aria-label="Toggle date comparison view">
+      <button class="proof-btn active" data-state="without" type="button">Without DateBack</button>
+      <button class="proof-btn" data-state="with" type="button">With DateBack</button>
+    </div>
 
+    <div class="proof-stage">
+
+      <!-- WITHOUT -->
+      <div class="proof-view" id="proof-without">
+        <div class="proof-card error-card">
+          <div class="proof-card-header">
+            <span class="proof-card-label error-label">Both memories show the same wrong date</span>
+            <span class="proof-badge error-badge">Export date only</span>
+          </div>
+          <div class="proof-photos">
+            <div class="proof-photo-item">
+              <p class="proof-photo-year">Memory from 2016</p>
+              <div class="proof-photo-frame">
+                <img src="images/example-lexi-2016.jpg" alt="Snapchat memory from 2016" loading="lazy">
+                <div class="proof-date-pill error-pill">Jan 7, 2026</div>
+              </div>
+            </div>
+            <div class="proof-photo-item">
+              <p class="proof-photo-year">Memory from 2025</p>
+              <div class="proof-photo-frame">
+                <img src="images/example-lexi-2025.jpg" alt="Snapchat memory from 2025" loading="lazy">
+                <div class="proof-date-pill error-pill">Jan 7, 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="proof-caption error-caption">Your entire photo timeline collapses to a single day. Every memory — years apart — looks like it was taken today.</p>
+      </div>
+
+      <!-- WITH -->
+      <div class="proof-view hidden" id="proof-with">
+        <div class="proof-photos-fixed">
+          <div class="proof-photo-item">
+            <div class="proof-card success-card">
+              <div class="proof-card-header">
+                <span class="proof-date-label">Nov 20, 2016</span>
+                <span class="proof-badge success-badge">Date restored</span>
+              </div>
+              <div class="proof-photo-frame">
+                <img src="images/example-lexi-2016.jpg" alt="Snapchat memory from 2016 with restored date" loading="lazy">
+                <div class="proof-date-pill success-pill">Nov 20, 2016</div>
+              </div>
+            </div>
+          </div>
+          <div class="proof-photo-item">
+            <div class="proof-card success-card">
+              <div class="proof-card-header">
+                <span class="proof-date-label">Aug 30, 2025</span>
+                <span class="proof-badge success-badge">Date restored</span>
+              </div>
+              <div class="proof-photo-frame">
+                <img src="images/example-lexi-2025.jpg" alt="Snapchat memory from 2025 with restored date" loading="lazy">
+                <div class="proof-date-pill success-pill">Aug 30, 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="proof-caption success-caption">DateBack reads the hidden JSON metadata and injects the original date into every file's EXIF data — ready for Google Photos, iCloud, or any cloud storage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OVERLAY MERGE ===================== -->
+<section id="overlay-merge">
+  <div class="container">
+    <div class="section-header">
+      <h2>Merge overlays<br>automatically.</h2>
+      <p>Snapchat exports overlay text and drawings as separate files. DateBack composites them back together into one complete, properly-dated memory — no manual work required.</p>
+    </div>
+
+    <div class="overlay-grid">
+
+      <!-- Without -->
+      <div class="overlay-col bad">
+        <div class="overlay-col-header">
+          <span class="overlay-col-title bad">Without DateBack</span>
+          <span class="proof-badge error-badge">Broken into parts</span>
+        </div>
+        <div class="overlay-col-body">
+          <div class="overlay-files">
+            <div class="overlay-file">
+              <img src="images/main.jpg" alt="Base photo without overlay" loading="lazy">
+              <span class="overlay-filename">main.jpg</span>
+            </div>
+            <div class="overlay-plus">+</div>
+            <div class="overlay-file transparent-bg">
+              <img src="images/overlay.png" alt="Separate overlay file with drawings" loading="lazy">
+              <span class="overlay-filename">overlay.png</span>
+            </div>
+          </div>
+          <span class="overlay-result-tag bad">Two unusable files, no date</span>
+        </div>
+      </div>
+
+      <!-- With -->
+      <div class="overlay-col good">
+        <div class="overlay-col-header">
+          <span class="overlay-col-title good">With DateBack</span>
+          <span class="proof-badge success-badge">Perfectly merged</span>
+        </div>
+        <div class="overlay-col-body">
+          <div class="overlay-merged">
+            <img src="images/merged.jpg" alt="Complete merged memory with overlays composited" loading="lazy">
+            <span class="overlay-filename">2020-08-23_17-09-51.jpg</span>
+          </div>
+          <span class="overlay-result-tag good">One file, correct date, complete memory</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2>Three steps. Done in minutes.</h2>
+      <p>DateBack handles all the complexity behind the scenes.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Open DateBack</h3>
+          <p>The app automatically finds your downloaded Snapchat ZIP files. No manual searching required.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Choose &amp; Start</h3>
+          <p>Pick a destination and select Computer or Cloud Mode. Hit Start Processing and DateBack takes over.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Upload Anywhere</h3>
+          <p>Your memories arrive in cloud-ready batches with correct dates — ready for Google Photos, iCloud, or anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>Built for large exports.<br>No compromises.</h2>
+      <p>Generic tools crash on large libraries and strip your metadata. DateBack was purpose-built for Snapchat exports—no manual scripting required.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <h3>EXIF Date Correction</h3>
+        <p>Reads the hidden <code>memories_history.json</code> from your Snapchat export and injects the original capture date into each file's metadata. Your 2018 memories will actually stay in 2018 — not get buried under today's date.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <h3>Cloud Mode — No Disk Space Needed</h3>
+        <p>Have 50GB of memories but only 10GB free? Cloud Mode processes in batches of 500 files, pausing so you can upload and clear space before continuing. Works with iCloud, Google Drive, OneDrive, Dropbox, and Box.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        </div>
+        <h3>Smart Batching</h3>
+        <p>Uploading 20,000 files to Google Photos at once crashes your browser every time. DateBack automatically organizes your memories into neat batches of 500 — making cloud uploads smooth, reliable, and crash-free.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+        </div>
+        <h3>Smart Resume</h3>
+        <p>Stop mid-way and restart without losing progress. DateBack tracks every processed file and picks up exactly where you left off — no duplicates, no missed memories, no starting over.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON ===================== -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-header">
+      <h2>Own your memories.<br>Stop renting them.</h2>
+      <p>Cloud subscriptions charge you every year to access what's already yours. DateBack is a one-time free download — you keep the files forever.</p>
+    </div>
+    <div class="comparison-grid">
+      <div class="comp-col comp-col-them">
+        <div class="comp-header">
+          <span class="comp-label them-label">Cloud Subscription</span>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><span class="comp-key">Cost</span><span class="comp-val them-val">$24/year, recurring</span></div>
+          <div class="comp-row"><span class="comp-key">Storage</span><span class="comp-val them-val">100 GB cap</span></div>
+          <div class="comp-row"><span class="comp-key">Ownership</span><span class="comp-val them-val">You rent access</span></div>
+          <div class="comp-row"><span class="comp-key">Metadata</span><span class="comp-val them-val">Locked in their app</span></div>
+          <div class="comp-row"><span class="comp-key">Privacy</span><span class="comp-val them-val">External servers</span></div>
+        </div>
+      </div>
+      <div class="comp-col comp-col-us">
+        <div class="comp-header">
+          <span class="comp-label us-label">DateBack</span>
+          <span class="comp-badge">Free</span>
+        </div>
+        <div class="comp-rows">
+          <div class="comp-row"><span class="comp-key">Cost</span><span class="comp-val us-val">$0 &mdash; free download</span></div>
+          <div class="comp-row"><span class="comp-key">Storage</span><span class="comp-val us-val">Unlimited (your drive)</span></div>
+          <div class="comp-row"><span class="comp-key">Ownership</span><span class="comp-val us-val">You own the files</span></div>
+          <div class="comp-row"><span class="comp-key">Metadata</span><span class="comp-val us-val">Fixed EXIF permanently</span></div>
+          <div class="comp-row"><span class="comp-key">Privacy</span><span class="comp-val us-val">Local processing, no DateBack upload</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="comparison-note">Save $240+ over the next 10 years by owning your data today.</p>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Free for everyone.</h2>
+      <p>No account, no payment, no activation key. Just download and recover your memories.</p>
+    </div>
+    <div class="pricing-wrap">
+
+      <div class="pricing-card">
+        <span class="pricing-eyebrow">Free Forever</span>
+        <h2 class="pricing-headline">Free Download</h2>
+        <div class="pricing-price">$0</div>
+        <p class="pricing-sub">Save your memories before they're gone. No strings attached.</p>
+        <ul class="pricing-features">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Unlimited photos &amp; videos
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            EXIF date correction
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Cloud Mode &mdash; zero disk space needed
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Smart resume &mdash; never lose progress
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Overlay merging
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            macOS 11+ &middot; Windows 10 / 11
+          </li>
+        </ul>
+        <div class="pricing-download-group">
+          <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn-primary btn-large" id="pricing-download-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span id="pricing-dl-label">Download for Mac</span>
+          </a>
+          <div class="pricing-other-wrap">
+            <button class="other-platforms-toggle" id="pricing-other-toggle" type="button">Other platforms ↓</button>
+            <div class="other-platforms-menu" id="pricing-other-menu">
+              <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Apple Silicon (M1 &middot; M2 &middot; M3 &middot; M4)</a>
+              <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Intel Mac (Core i5 &middot; i7 &middot; i9)</a>
+              <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" target="_blank" rel="noopener noreferrer">Windows 10 / 11 &middot; x64</a>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-meta">
+          <a href="changelog.html">v1.5.0 release notes</a>
+          <span class="pricing-sep">&middot;</span>
+          <a href="install.html">Installation guide</a>
+        </div>
+        <div class="pricing-support">
+          <p>If DateBack helped you recover memories, consider supporting the project.</p>
+          <a href="https://www.buymeacoffee.com/giovannilunetta" class="bmc-btn" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="174" height="44">
+          </a>
+        </div>
+      </div>
+
+      <div class="pricing-trust">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <div>
+            <strong>Apple Notarized</strong>
+            <p>Signed and verified by Apple. macOS Gatekeeper trusts it out of the box.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <div>
+            <strong>Runs 100% Locally</strong>
+            <p>No cloud processing. Your photos never leave your device.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <div>
+            <strong>No Account Required</strong>
+            <p>No sign-up. No tracking. No app analytics.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <div>
+            <strong>Email Support</strong>
+            <p>Response within 48 hours. <a href="mailto:support@dateback.app" data-action="open-contact" data-subject="Support Request">support@dateback.app</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPORT GUIDE ===================== -->
+<section id="export-guide">
+  <div class="container">
+    <div class="section-header">
+      <h2>Need help exporting<br>your Snapchat data?</h2>
+      <p>Before DateBack can run, you need to download your memories from Snapchat. Follow these steps exactly &mdash; missing a toggle means your dates won&rsquo;t restore.</p>
+    </div>
+
+    <details class="export-accordion">
+      <summary>
+        <span>Show step-by-step export guide (7 steps)</span>
+        <span class="accordion-chevron">+</span>
+      </summary>
+      <div class="export-content">
+
+        <div class="export-alert">
+          <strong>Before you start: &ldquo;My Eyes Only&rdquo; memories</strong>
+          Photos and videos in My Eyes Only <strong>cannot be exported</strong> unless you unhide them first. In the Snapchat app: My Eyes Only &rarr; Select &rarr; Select All &rarr; Three Dots &rarr; <strong>Unhide Snaps</strong>.
+        </div>
+
+        <div class="export-steps">
+
+          <div class="export-step">
+            <div class="export-step-num">01</div>
+            <div class="export-step-body">
+              <h4>Select your data</h4>
+              <p>Go to Snapchat&rsquo;s data download page and log in. <strong>Critical:</strong> make sure both <strong>&ldquo;Export your Memories&rdquo;</strong> and <strong>&ldquo;Export JSON Files&rdquo;</strong> are toggled ON. Without the JSON files, dates cannot be restored.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP1.webp" alt="Toggle Export your Memories and Export JSON Files" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">02</div>
+            <div class="export-step-body">
+              <h4>Choose date range</h4>
+              <p>Scroll to the date filter and select <strong>&ldquo;All Time&rdquo;</strong> to get everything. Confirm your email address and click <strong>&ldquo;Submit.&rdquo;</strong></p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP2.webp" alt="Select All Time date range" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">03</div>
+            <div class="export-step-body">
+              <h4>Wait for processing</h4>
+              <p>Snapchat will show a &ldquo;Processing&rdquo; status. This can take minutes to hours depending on your library size. You can close the tab &mdash; you&rsquo;ll get an email when it&rsquo;s ready.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP3.webp" alt="Processing status" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">04</div>
+            <div class="export-step-body">
+              <h4>Check your email</h4>
+              <p>When your data is ready, Snapchat sends an email with a download link. Open it and click the link to return to the download page.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP4.webp" alt="Email notification from Snapchat" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">05</div>
+            <div class="export-step-body">
+              <h4>Access your exports</h4>
+              <p>You&rsquo;ll be taken back to the website. Look for your export under <strong>&ldquo;Your exports&rdquo;</strong> and click <strong>&ldquo;See exports&rdquo;</strong> if needed.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP5.webp" alt="Your exports section" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">06</div>
+            <div class="export-step-body">
+              <h4>Download the ZIP file(s)</h4>
+              <p>Click the <strong>Download</strong> button next to your export. If Snapchat split your library into multiple files, download every one and keep them all in the same folder.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP6.webp" alt="Download button" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="export-step">
+            <div class="export-step-num">07</div>
+            <div class="export-step-body">
+              <h4>Locate the files &mdash; don&rsquo;t unzip</h4>
+              <p>Open your Downloads folder. You&rsquo;ll see files named <strong>mydata~[timestamp].zip</strong>, <strong>mydata~[timestamp]-1.zip</strong>, etc. Do <strong>not</strong> unzip them. Keep them all in the same folder. DateBack detects and handles them automatically.</p>
+              <div class="export-step-img">
+                <img src="images/DownloadSnapchatDataP7.webp" alt="ZIP files in Downloads folder" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== INSTALL GUIDE ===================== -->
+<section class="install-callout-section" id="install-guide">
+  <div class="container">
+    <div class="section-header">
+      <h2>Installation guide</h2>
+      <p>From download to running in about two minutes.</p>
+    </div>
+    <div class="install-callout-card">
+      <div class="install-chip-tip">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span><strong>Mac users:</strong> Click <strong>&#63743; &rarr; About This Mac</strong>. Look for &ldquo;Apple M1/M2/M3/M4&rdquo; (Apple Silicon) or &ldquo;Intel Core&rdquo; (Intel Mac) to choose the right download.</span>
+      </div>
+      <div class="install-steps-inline">
+        <div class="install-step-inline">
+          <div class="install-step-n">1</div>
+          <div>
+            <h4>Download the right file</h4>
+            <p>From the GitHub release page, download <code>-arm64.dmg</code> for Apple Silicon, <code>-x64.dmg</code> for Intel Mac, or <code>-x64-win.exe</code> for Windows 10/11.</p>
+          </div>
+        </div>
+        <div class="install-step-inline">
+          <div class="install-step-n">2</div>
+          <div>
+            <h4>Open the installer</h4>
+            <p><strong>Mac:</strong> Double-click the <code>.dmg</code> and drag DateBack to your Applications folder.<br><strong>Windows:</strong> Double-click the <code>.exe</code> &mdash; it installs silently with no admin rights needed.</p>
+          </div>
+        </div>
+        <div class="install-step-inline">
+          <div class="install-step-n">3</div>
+          <div>
+            <h4>Clear the security prompt</h4>
+            <p><strong>macOS Gatekeeper:</strong> Right-click DateBack in Applications &rarr; <strong>Open</strong> &rarr; click <strong>Open</strong>. Only needed once.<br><strong>Windows SmartScreen:</strong> Click <strong>More info</strong> &rarr; <strong>Run anyway</strong>. Expected for new apps.</p>
+          </div>
+        </div>
+        <div class="install-step-inline">
+          <div class="install-step-n">4</div>
+          <div>
+            <h4>Open DateBack</h4>
+            <p>Launch from Applications (Mac) or the Start menu (Windows). The app automatically finds your Snapchat ZIP files &mdash; no setup required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Is this safe? Do you see my photos?</summary>
+        <p>Completely safe. DateBack processes everything locally on your Mac or PC — your photos never leave your device and are never seen by anyone else.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does this work on Windows or Intel Macs?</summary>
+        <p>Yes. Download <strong>-arm64.dmg</strong> for Apple Silicon (M1&ndash;M4), <strong>-x64.dmg</strong> for Intel Mac, or <strong>-x64-win.exe</strong> for Windows. On first launch, Windows SmartScreen may show a warning &mdash; click <strong>More info &rarr; Run anyway</strong>. This is expected for new apps.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>My download is 100GB+. Will this work?</summary>
+        <p>Yes. Cloud Mode was built exactly for this. It streams and processes one file at a time in batches of 500, pausing so you can upload before continuing. No crashes, no disk space issues, no memory limits.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is Cloud Mode?</summary>
+        <p>Cloud Mode processes your memories in batches of 500 and places each batch into a cloud folder you choose (iCloud Drive, Google Drive, OneDrive, Dropbox, or Box). After each batch, the app pauses so you can let it sync and free up space before moving on.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Snapchat gave me multiple ZIP files. What do I do?</summary>
+        <p>This is normal for large exports. Download all files (<strong>mydata~[timestamp].zip</strong>, <strong>mydata~[timestamp]-1.zip</strong>, etc.) into the same folder without renaming them. DateBack automatically detects and processes them all together as one export.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I resume if I stop midway?</summary>
+        <p>Yes. When you restart on an existing output folder, DateBack offers: <strong>Skip Already Processed</strong> (fast, recommended), <strong>Verify Files</strong> (slower but thorough), or <strong>Start Fresh</strong>. Your progress is never lost.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is DateBack really free?</summary>
+        <p>Yes. Free download, no account, no payment, no activation key. If it helped you recover memories you thought were lost, you can optionally <a href="https://www.buymeacoffee.com/giovannilunetta" target="_blank" rel="noopener noreferrer">support the project</a>.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>macOS says DateBack cannot be opened</summary>
+        <p>On first launch, right-click DateBack in Applications and choose <strong>Open</strong>, then click <strong>Open</strong> in the macOS prompt. This is a standard Gatekeeper step for newly downloaded apps and only appears once.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>My ZIP is missing memories_history.json</summary>
+        <p>Your Snapchat export was requested without the right options. Return to Snapchat&rsquo;s data download page and make sure both <strong>&ldquo;Export your Memories&rdquo;</strong> and <strong>&ldquo;Export JSON Files&rdquo;</strong> are toggled ON before submitting a new request.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>I&rsquo;m getting an error I can&rsquo;t fix</summary>
+        <p>Go to <strong>Help &rarr; Export Support Logs</strong> in the app menu. Email the ZIP along with a description to <a href="mailto:support@dateback.app">support@dateback.app</a>. We respond within 48 hours and will fix it.</p>
+      </details>
+
+    </div>
+
+    <h3 class="faq-subsection-heading">Troubleshooting</h3>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>The download page is confusing. Which file do I need?</summary>
+        <p>Open the latest GitHub release and look for two <strong>.dmg</strong> files. Download <strong>DateBack-...-arm64.dmg</strong> if you have an Apple Silicon Mac (M1, M2, M3, M4), or <strong>DateBack-...-x64.dmg</strong> if you have an Intel Mac. Not sure which? Click <strong>&#63743; &rarr; About This Mac</strong> &mdash; look for &ldquo;Apple M&rdquo; (Silicon) or &ldquo;Intel Core&rdquo; (Intel). Windows users: download the <strong>-x64-win.exe</strong> installer.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Not a recognized cloud folder</summary>
+        <p>Cloud Mode only accepts folders inside a supported sync service. If you see <em>&ldquo;Not a recognized cloud folder. Choose iCloud Drive, Google Drive, OneDrive, Dropbox, or Box.&rdquo;</em> &mdash; pick a folder that lives inside one of those five services. Folders set up via symlinks are not supported.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Retry Corrupted Files doesn&rsquo;t work</summary>
+        <p>The retry feature requires a <strong>detailed_report.json</strong> file created by the previous processing run. If that file is missing, the app will show <em>&ldquo;No detailed_report.json found. Run full processing first.&rdquo;</em> Complete a full processing run first, then use <strong>Retry Corrupted Files</strong> from the completion screen.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Open Output Folder doesn&rsquo;t open anything</summary>
+        <p>For security, DateBack only opens folders that were approved during the current session. If you restart the app or change your selected folder, the previous path is no longer active. Re-run processing with the same folder selected, or navigate to it manually in Finder. In Cloud Mode this button opens your cloud destination folder, not the local output folder.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>DateBack found fewer ZIP files than I downloaded from Snapchat</summary>
+        <p>DateBack looks for all ZIP files from the same export in the same folder. Make sure every file you downloaded (<strong>mydata~[timestamp].zip</strong>, <strong>mydata~[timestamp]-1.zip</strong>, etc.) is in the same folder &mdash; don&rsquo;t move some to a subfolder or rename them. If you&rsquo;ve already moved them around, put them all back together in one folder, then use <strong>Find My Zip Automatically</strong> or drag the folder into DateBack.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-inner container">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <img src="images/logo.png" alt="DateBack" width="22" height="22">
+        DateBack<span>.app</span>
+      </a>
+      <p>Archive memories the right way.</p>
+    </div>
+    <div class="footer-links">
+      <a href="changelog.html">Changelog</a>
+      <a href="install.html">Install Guide</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+      <a href="licenses.html">Licenses</a>
+      <a href="mailto:support@dateback.app" data-action="open-contact" data-subject="General Inquiry">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Giovanni Lunetta. Not affiliated with Snap Inc.</p>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta" id="mobile-sticky-cta">
+  <a href="https://github.com/giovanni-lunetta/dateback-releases/releases/latest" class="btn-primary" id="mobile-sticky-btn" target="_blank" rel="noopener noreferrer">
+    Download DateBack &mdash; Free
+  </a>
+</div>
+
+<!-- ===================== CONTACT MODAL ===================== -->
+<div id="contactModal" class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+  <div class="contact-modal-content">
+    <button type="button" class="contact-modal-close" data-action="close-contact" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <h2 id="contact-title">Get in touch</h2>
+    <p class="contact-modal-sub">Have a question or need support? We respond within 48 hours.</p>
+    <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="netlify-honeypot"><label>Do not fill this in: <input name="bot-field"></label></p>
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" required placeholder="you@email.com">
+      </div>
+      <div class="form-group">
+        <label for="contact-subject">Subject</label>
+        <input type="text" id="contact-subject" name="subject" placeholder="Support Request">
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required placeholder="Describe your issue or question..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="contactSubmit">Send Message</button>
+      <div class="form-message form-success" id="contactSuccess">Message sent! We&rsquo;ll get back to you within 48 hours.</div>
+      <div class="form-message form-error" id="contactError">Something went wrong. Please email <a href="mailto:support@dateback.app">support@dateback.app</a> directly.</div>
+    </form>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+  <img class="lb-img" id="lb-img" alt="Enlarged view">
+</div>
+
+<script src="dateback.js" defer></script>
 </body>
-
 </html>
