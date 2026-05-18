@@ -8,7 +8,7 @@ Official website for [DateBack](https://dateback.app) - Archive your Snapchat Me
 
 ## 📋 About
 
-DateBack is a macOS app that processes Snapchat Memories exports, fixing metadata and organizing files for cloud storage. This repository contains the marketing website and documentation.
+DateBack is a desktop app for macOS and Windows that processes Snapchat Memories exports, fixing metadata and organizing files for cloud storage. This repository contains the marketing website and documentation.
 
 ## 🛠️ Tech Stack
 
@@ -55,8 +55,8 @@ dateback-website/
 ├── docs/               # Repo-local notes for website development/testing
 ├── index.html          # Main landing page
 ├── changelog.html      # Release notes
-├── styles.css          # All styles
-├── script.js           # Interactive features
+├── dateback.css        # Current public site styles
+├── dateback.js         # Current public site interactions
 ├── netlify.toml        # Netlify config & security headers
 ├── images/             # Assets and screenshots
 ├── licenses/           # Third-party licenses
@@ -107,7 +107,7 @@ DateBack app builds and update metadata are distributed from the public [datebac
 ## 🔗 Links
 
 - **Website:** [dateback.app](https://dateback.app)
-- **Download:** [Latest Mac release](https://github.com/giovanni-lunetta/dateback-releases/releases/latest)
+- **Download:** [Latest desktop release](https://github.com/giovanni-lunetta/dateback-releases/releases/latest)
 - **Optional support:** [Buy Me A Coffee](https://www.buymeacoffee.com/giovannilunetta)
 - **Support:** Contact form on website
 - **App Releases Repository:** [giovanni-lunetta/dateback-releases](https://github.com/giovanni-lunetta/dateback-releases)

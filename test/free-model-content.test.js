@@ -226,7 +226,7 @@ test('README points public app distribution copy at the public GitHub repo', () 
     assert.equal(source.includes('App Repository:** Private'), false);
     assert.equal(source.includes('App Repository: Private'), false);
     assert.ok(source.includes('https://github.com/giovanni-lunetta/dateback-releases'));
-    assert.ok(source.includes('Latest Mac release'));
+    assert.ok(source.includes('Latest desktop release'));
 });
 
 test('public hygiene ignores generated and local-only files while keeping bundled source archives', () => {
@@ -320,4 +320,14 @@ test('sitemap orders higher-priority pages before lower-priority pages', () => {
             `priority ${priorities[index - 1]} should be >= following priority ${priorities[index]}`
         );
     }
+});
+
+test('legacy public assets with private-path screenshots are not tracked', () => {
+    const tracked = require('node:child_process')
+        .execFileSync('git', ['ls-files', 'styles.css', 'script.js', 'images/archive/legacy_app_screenshots'], { cwd: root, encoding: 'utf8' })
+        .trim()
+        .split('\n')
+        .filter(Boolean);
+
+    assert.deepEqual(tracked, []);
 });
