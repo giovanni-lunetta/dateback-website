@@ -68,8 +68,38 @@
   <div class="container">
     <div class="changelog-wrap">
 
-      <!-- v1.5.0 Latest -->
+      <!-- v1.5.2 Latest -->
       <details class="version-entry latest" open>
+        <summary>
+          <span class="version-num">v1.5.2</span>
+          <span class="version-date">May 18, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Cloud mode &mdash; Resuming a multi-session run could incorrectly show &ldquo;All memories recovered!&rdquo; when prior sessions had CDN failures &mdash; losses are now correctly attributed</li>
+          <li>Cloud mode &mdash; Image and video counts in the success summary now reflect the cumulative totals across all sessions, not just the current session</li>
+          <li>Resume &mdash; Removed a misleading log line that said &ldquo;Will continue filling it.&rdquo; for incomplete batches that were not going to be backfilled</li>
+        </ul>
+      </details>
+
+      <!-- v1.5.1 -->
+      <details class="version-entry">
+        <summary>
+          <span class="version-num">v1.5.1</span>
+          <span class="version-date">May 15, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Security &mdash; ZIP paths, output directories, and staging directories are now validated against the file-picker approval set before use</li>
+          <li>Security &mdash; ZIP central-directory metadata validated before indexing: member cap, size cap, and symlink blocking</li>
+          <li>Security &mdash; Windows drive roots and network share roots are explicitly blocked as output directories</li>
+          <li>Processing &mdash; Overlay merge failure now saves the main image instead of writing an error record</li>
+          <li>Cloud mode &mdash; Approved-directory state is correctly cleared and repopulated at the start of each new run</li>
+        </ul>
+      </details>
+
+      <!-- v1.5.0 -->
+      <details class="version-entry">
         <summary>
           <span class="version-num">v1.5.0</span>
           <span class="version-date">May 14, 2026</span>

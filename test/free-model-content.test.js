@@ -49,7 +49,8 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.5.0'), 'home page should present the current release version');
+    assert.ok(source.includes('v1.5.2'), 'home page should present the current release version');
+    assert.ok(source.includes('v1.5.2 release notes'), 'home page should link current release notes');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
@@ -304,7 +305,7 @@ test('all public HTML pages declare 1200 by 630 social image metadata', () => {
 test('sitemap includes current public pages and release freshness', () => {
     const source = read('sitemap.xml');
     assert.ok(source.includes('<loc>https://dateback.app/licenses.html</loc>'));
-    assert.ok(source.includes('<lastmod>2026-05-15</lastmod>'));
+    assert.ok(source.includes('<lastmod>2026-05-18</lastmod>'));
 });
 
 test('sitemap orders higher-priority pages before lower-priority pages', () => {
