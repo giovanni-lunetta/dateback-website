@@ -68,8 +68,24 @@
   <div class="container">
     <div class="changelog-wrap">
 
-      <!-- v1.5.2 Latest -->
+      <!-- v1.5.3 Latest -->
       <details class="version-entry latest" open>
+        <summary>
+          <span class="version-num">v1.5.3</span>
+          <span class="version-date">May 18, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Security &mdash; Retry output filenames are now validated before use; a crafted report entry with a path-like date field can no longer write files outside the output directory</li>
+          <li>Security &mdash; Support log redaction now covers <code>access_token</code>, <code>refresh_token</code>, <code>Authorization</code>, <code>client_secret</code>, and related variants</li>
+          <li>Processing &mdash; Non-object entries in a <code>memories_history.json</code> Saved Media array no longer crash the worker; they are counted and skipped</li>
+          <li>Processing &mdash; A failed remote file-size check no longer silently skips the entry; it now proceeds to the download attempt</li>
+          <li>Reports &mdash; A redacted copy of the detailed report (<code>detailed_report_redacted.json</code>) is now saved alongside the full report, safe to share in support requests</li>
+        </ul>
+      </details>
+
+      <!-- v1.5.2 -->
+      <details class="version-entry">
         <summary>
           <span class="version-num">v1.5.2</span>
           <span class="version-date">May 18, 2026</span>

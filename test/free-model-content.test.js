@@ -49,8 +49,8 @@ test('public pages use GitHub Releases for the free Mac download', () => {
 test('home page presents optional donation instead of purchase activation', () => {
     const source = read('index.html');
 
-    assert.ok(source.includes('v1.5.2'), 'home page should present the current release version');
-    assert.ok(source.includes('v1.5.2 release notes'), 'home page should link current release notes');
+    assert.ok(source.includes('v1.5.3'), 'home page should present the current release version');
+    assert.ok(source.includes('v1.5.3 release notes'), 'home page should link current release notes');
     assert.ok(source.includes(donationUrl), 'home page should include the Buy Me A Coffee support link');
     assert.equal(source.includes('$1.99'), false);
     assert.equal(source.includes('license key'), false);
