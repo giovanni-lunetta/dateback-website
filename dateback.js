@@ -438,7 +438,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('message', e => {
-    if (e.origin !== EDITOR_ORIGIN && window.parent === window) return;
+    // Only ever act on messages from the trusted editor origin. (Previously this
+    // guard was bypassed whenever the page was framed; frame-ancestors 'none'
+    // masked it, but the check itself was incorrect.)
+    if (e.origin !== EDITOR_ORIGIN) return;
     if (e.data?.type === '__activate_edit_mode') {
       if (!document.getElementById('tweaks-panel')) buildPanel();
       document.getElementById('tweaks-panel').classList.add('open');
