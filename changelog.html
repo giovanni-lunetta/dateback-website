@@ -68,8 +68,25 @@
   <div class="container">
     <div class="changelog-wrap">
 
-      <!-- v1.5.3 Latest -->
+      <!-- v1.5.4 Latest -->
       <details class="version-entry latest" open>
+        <summary>
+          <span class="version-num">v1.5.4</span>
+          <span class="version-date">August 23, 2026</span>
+          <span class="version-chevron">+</span>
+        </summary>
+        <ul class="version-list">
+          <li>Photos &amp; Memories &mdash; Saved memories now carry their real date inside the photo or video file itself, so apps like Photos sort them correctly by the original date instead of showing today&rsquo;s date</li>
+          <li>Reliability &mdash; Clicking Stop right as a run finished could briefly show the &ldquo;all done&rdquo; screen over an interrupted run &mdash; fixed</li>
+          <li>Reliability &mdash; A stuck cleanup step after clicking Stop could leave the app waiting indefinitely &mdash; now resolves automatically instead of hanging</li>
+          <li>Reliability &mdash; Fast repeated clicks on Start or Retry could start two processing runs at once &mdash; now guarded against</li>
+          <li>Security &mdash; Broadened log redaction to catch more secret-key naming styles</li>
+          <li>Security &mdash; Closed a denial-of-service path in ZIP file validation and updated several dependencies with disclosed vulnerabilities</li>
+        </ul>
+      </details>
+
+      <!-- v1.5.3 -->
+      <details class="version-entry">
         <summary>
           <span class="version-num">v1.5.3</span>
           <span class="version-date">May 18, 2026</span>
