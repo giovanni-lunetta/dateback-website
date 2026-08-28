@@ -93,7 +93,7 @@
           <span class="version-chevron">+</span>
         </summary>
         <ul class="version-list">
-          <li>Security &mdash; Retry output filenames are now validated before use; a crafted report entry with a path-like date field can no longer write files outside the output directory</li>
+          <li>Security &mdash; Strengthened validation of retry-generated filenames</li>
           <li>Security &mdash; Support log redaction now covers <code>access_token</code>, <code>refresh_token</code>, <code>Authorization</code>, <code>client_secret</code>, and related variants</li>
           <li>Processing &mdash; Non-object entries in a <code>memories_history.json</code> Saved Media array no longer crash the worker; they are counted and skipped</li>
           <li>Processing &mdash; A failed remote file-size check no longer silently skips the entry; it now proceeds to the download attempt</li>
@@ -123,9 +123,9 @@
           <span class="version-chevron">+</span>
         </summary>
         <ul class="version-list">
-          <li>Security &mdash; ZIP paths, output directories, and staging directories are now validated against the file-picker approval set before use</li>
-          <li>Security &mdash; ZIP central-directory metadata validated before indexing: member cap, size cap, and symlink blocking</li>
-          <li>Security &mdash; Windows drive roots and network share roots are explicitly blocked as output directories</li>
+          <li>Security &mdash; Strengthened path and directory-permission validation throughout the folder-selection and processing pipeline</li>
+          <li>Security &mdash; Hardened ZIP handling against several classes of malformed or unsafe archives</li>
+          <li>Security &mdash; Restricted output directory selection to safe, expected locations</li>
           <li>Processing &mdash; Overlay merge failure now saves the main image instead of writing an error record</li>
           <li>Cloud mode &mdash; Approved-directory state is correctly cleared and repopulated at the start of each new run</li>
         </ul>
@@ -372,13 +372,13 @@
           <span class="version-chevron">+</span>
         </summary>
         <ul class="version-list">
-          <li>Security &mdash; Fixed 17 vulnerabilities (3 CRITICAL, 8 HIGH severity) &mdash; 85% risk reduction</li>
-          <li>Security &mdash; ZIP bomb protection with size limits (100k files, 50GB max)</li>
-          <li>Security &mdash; Path traversal (Zip Slip) protection against malicious archives</li>
-          <li>Security &mdash; Command injection prevention in process cleanup</li>
-          <li>Security &mdash; TOCTOU race condition fix in directory validation</li>
-          <li>Security &mdash; Recursive symlink protection in directory deletion</li>
-          <li>Security &mdash; Auto-updater downgrade attack protection</li>
+          <li>Security &mdash; Broad security hardening release following an internal security review</li>
+          <li>Security &mdash; Added protection against maliciously oversized ZIP archives</li>
+          <li>Security &mdash; Strengthened ZIP extraction safety checks</li>
+          <li>Security &mdash; Hardened process cleanup against unsafe input</li>
+          <li>Security &mdash; Hardened directory validation against race conditions</li>
+          <li>Security &mdash; Added protection against unsafe symlinks during directory cleanup</li>
+          <li>Security &mdash; Added downgrade-attack protection to the auto-updater</li>
         </ul>
       </details>
 
@@ -390,12 +390,12 @@
           <span class="version-chevron">+</span>
         </summary>
         <ul class="version-list">
-          <li><strong>v1.0.7</strong> (Jan 9, 2026) &mdash; SSRF protection, ZIP symlink blocking, sticky mobile CTA, performance improvements</li>
+          <li><strong>v1.0.7</strong> (Jan 9, 2026) &mdash; Additional download-security hardening, sticky mobile CTA, performance improvements</li>
           <li><strong>v1.0.6</strong> (Jan 8, 2026) &mdash; iCloud support, resume modes (Trust / Verify / Start Fresh), completion summary modal redesign</li>
           <li><strong>v1.0.5</strong> (Jan 3, 2026) &mdash; 20&times; faster verification, true offline ZIP processing, 30&ndash;50% faster downloads</li>
           <li><strong>v1.0.4</strong> (Jan 2, 2026) &mdash; GPL compliance fixes, resume feature fix, FFmpeg source availability</li>
           <li><strong>v1.0.3</strong> (Dec 31, 2025) &mdash; Security updates, Electron v39.2.7 upgrade, Auto-Find ZIP feature</li>
-          <li><strong>v1.0.2</strong> (Dec 30, 2025) &mdash; Security hardening, 5 critical vulnerability fixes, 100MB installer size reduction</li>
+          <li><strong>v1.0.2</strong> (Dec 30, 2025) &mdash; Security hardening following an internal review, 100MB installer size reduction</li>
           <li><strong>v1.0.1</strong> (Dec 30, 2025) &mdash; UI refinements, Fast Pass optimization, improved ETA accuracy</li>
           <li><strong>v1.0.0</strong> (Dec 30, 2025) &mdash; Initial public release, fully notarized for macOS Apple Silicon</li>
         </ul>
